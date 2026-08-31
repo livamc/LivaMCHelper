@@ -63,7 +63,7 @@ entries:
     content: "/msg <oyuncu> <mesaj> = Özel mesaj gönderir | /r <mesaj> = Son mesaja cevap verir | /ignore <oyuncu> = Oyuncuyu engeller | /msgtoggle = Özel mesaj almayı açar/kapatır | /etiket = Etiket menüsünü açar | /sure = Toplam oynama süreni gösterir | /surebak <oyuncu> = Başka oyuncunun süresini gösterir | /afk = AFK moduna geçer | /ping = Gecikmeni ölçer"
 
   - title: "Komutlar - Bilgi"
-    content: "/bilgi = Rehberi açar | /baslangic = Yeni oyuncu rehberini açar | /kurallar = Kural ekranını açar | /komutlar = Komut listesini açar | /sezon = Sezon sıralamalarını ve ödüllerini gösterir | /profil = Oyuncu profilini ve istatistiklerini açar | /vip = Rütbe menüsünü açar | /kit = Kit menüsünü açar | /sor <soru> = Yapay zeka yardımcıya soru sorar (bu komut!) | /vote = Oy verme sitelerinin linklerini verir | /discord = Discord sunucusunun linkini verir | /site = Web sitesinin linkini verir | /hesapesle = Discord hesabını oyun hesabıyla eşler"
+    content: "/bilgi = Rehberi açar | /baslangic = Yeni oyuncu rehberini açar | /kurallar = Kural ekranını açar | /komutlar = Komut listesini açar | /sezon = Sezon sıralamalarını ve ödüllerini gösterir | /profil = Oyuncu profilini ve istatistiklerini açar | /vip = Rütbe menüsünü açar | /kit = Kit menüsünü açar | /sor <soru> = Yapay zeka yardımcıya soru sorar (bu komut!) | /vote = Oy verme sitelerinin linklerini verir | /discord = Discord sunucusunun linkini verir | /site = Web sitesinin linkini verir | /hesapesle = Discord hesabını oyun hesabıyla eşler | /envanterkoruma = Envanter koruma panelini açar, kalan hakkını gösterir ve korumayı açıp kapatır"
 
   - title: "Komutlar - Türkçe Karakter Uyarısı"
     content: "Komutlarda Türkçe karakter kullanılmaz. /yaris, /gunlukgorev, /takim, /hesapesle şeklinde yazılır. Yazarken TAB tuşu komutu tamamlar."
@@ -100,7 +100,7 @@ entries:
     content: "Evet. Ender sandık kişiye özeldir ve içindeki eşyalar çalınamaz. En değerli eşyalarını orada tutman en güvenli yoldur."
 
   - title: "SSS: Ölünce eşyalarım düşer mi?"
-    content: "Evet, öldüğünde eşyaların yere düşer. Ender sandıktaki eşyaların güvendedir. Ayrıca ölmek seviye puanı da kaybettirir: bir oyuncunun elinden ölürsen -50, mob/düşme/lav gibi sebeplerle ölürsen -15 puan."
+    content: "Evet, öldüğünde eşyaların yere düşer. Ender sandıktaki eşyaların güvendedir. Ayrıca ölmek seviye puanı da kaybettirir: bir oyuncunun elinden ölürsen -50, mob/düşme/lav gibi sebeplerle ölürsen -15 puan. Siteden envanter koruma satın alıp aktifleştirirsen bir kereliğine eşyaların korunur."
 
   - title: "SSS: Nerede PvP atabilirim?"
     content: "Spawn ve pazaryeri dışında her yerde. Ana dünya, Nether ve End'de PvP açıktır ve serbesttir. Ayrı bir arena veya düello sistemi yoktur."
@@ -290,6 +290,34 @@ entries:
 
   - title: "SSS: En zengin oyuncular kimler?"
     content: "/baltop komutu ile para sıralamasını, /kristal top komutu ile kristal sıralamasını görebilirsin."
+
+  # ── ENVANTER KORUMA ───────────────────────────────────────
+  - title: "SSS: Envanter koruma nedir?"
+    content: "Envanter koruma, bir kereliğine ölümden korunmanı sağlayan ve web sitesinden satın alınan bir haktır. Koruman açıkken öldüğünde envanterin, zırhın ve yan elindeki eşya yere düşmez, hepsi üzerinde kalır. Tek kullanımlıktır: korunan ölümden sonra hakkın biter ve ikinci ölümünde eşyaların normal şekilde düşer."
+
+  - title: "SSS: Envanter korumayı nasıl alırım?"
+    content: "Web sitesinden (livamc.com) satın alınır, oyun içinden elde edilemez. Satın aldıktan sonra hakkın hesabına tanımlanır. Birden fazla hak alabilirsin, sırayla kullanılır. Kalan hakkını görmek için oyunda /envanterkoruma yaz."
+
+  - title: "SSS: Envanter korumayı nasıl açarım?"
+    content: "Satın aldığın an KENDİLİĞİNDEN AÇILMAZ, elle açman gerekir. Oyunda /envanterkoruma yazarsın, açılan panelde AKTİFLEŞTİR düğmesine tıklarsın. Koruman açıkken isminin yanında bir kalkan simgesi görünür. Kapatmak için /envanterkoruma kapat yazarsın."
+
+  - title: "SSS: Envanter koruma neyi korur, neyi korumaz?"
+    content: "KORUR: envanterindeki tüm eşyalar, üzerindeki zırh ve yan elindeki eşya. Ölüm sebebi fark etmez; oyuncu tarafından öldürülme, lav, düşme, boşluk, açlık, mob ve savaş etiketliyken oyundan çıkma dahil hepsi kapsam içindedir. KORUMAZ: XP ve seviye puanın korunmaz, ölünce ikisi de normal şekilde gider."
+
+  - title: "SSS: Envanter korumayı savaşta açabilir miyim?"
+    content: "Hayır. Bir oyuncuya vurduğun veya vurulduğun anda savaş etiketi alırsın ve o sırada koruma açılmaz. Kavgaya girmeden ÖNCE açman gerekir. Bu kural, kaybettiğini görünce korumaya sarılmayı engellemek içindir."
+
+  - title: "SSS: Envanter korumam neden çalışmadı?"
+    content: "En sık sebep korumayı açmamış olmandır; satın almak yetmez, oyunda /envanterkoruma yazıp aktifleştirmen gerekir. İkinci sebep hakkının bitmiş olmasıdır, tek kullanımlıktır. /envanterkoruma yazarak kalan hakkını ve durumunu görebilirsin. Yine de sorun varsa Discord'dan destek talebi aç, her işlem kayıt altına alınıyor."
+
+  - title: "SSS: Envanter koruması olduğunu başkaları görür mü?"
+    content: "Evet. Koruman açıkken isminin yanında kalkan simgesi görünür ve bunu yakınındaki diğer oyuncular da görür. Bu genelde işine yarar, seni öldürmenin ganimeti olmadığını bilirler."
+
+  - title: "SSS: /kill yazarsam envanter koruma hakkım gider mi?"
+    content: "Hayır. /kill komutu ile kendini öldürmek veya bir yetkili tarafından öldürülmek hakkını harcamaz, koruma da devreye girmez."
+
+  - title: "SSS: Öldürdüğüm oyuncunun eşyaları neden düşmedi?"
+    content: "O oyuncunun envanter koruması vardı. Bu, siteden satın alınan tek kullanımlık bir haktır ve öldüğünde eşyalarının düşmesini engeller. Böyle bir durumda sana bilgi mesajı gönderilir. Hakkı o ölümle birlikte tükenir, bir sonraki ölümünde eşyaları normal şekilde düşer."
 
   # ── CEVAP TARZI ───────────────────────────────────────────
   - title: "Cevap Tarzı"
@@ -646,6 +674,54 @@ systems:
       - Rütbeye özel kitler (/kit)
 
       Sunucu tamamen ücretsizdir. VIP almak zorunlu değildir, sadece kolaylık sağlar. Oyun içi ilerleme için VIP gerekmez.
+
+  - title: "Envanter Koruma"
+    content: |
+      Envanter koruma, bir kereliğine ölümden korunmayı sağlayan ve web sitesinden (livamc.com) satın alınan bir haktır. Oyun içinden elde edilemez.
+
+      NE YAPAR
+      Koruman açıkken öldüğünde envanterin, üzerindeki zırh ve yan elindeki eşya yere düşmez, hepsi üzerinde kalır. Ekranda "ENVANTER KORUNDU" yazısı çıkar.
+
+      TEK KULLANIMLIKTIR
+      Korunan bir ölümden sonra hakkın 1 azalır ve koruma otomatik olarak kapanır. İkinci ölümünde eşyaların normal şekilde düşer. Birden fazla hak satın alınabilir, sırayla kullanılır.
+
+      HANGİ ÖLÜMLERİ KAPSAR
+      Ölüm sebebi fark etmez. Hepsi kapsam içindedir:
+      - Başka bir oyuncu tarafından öldürülme (PvP)
+      - Lav, düşme, boşluk, açlık, ateş
+      - Moblar
+      - Savaş etiketliyken oyundan çıkma (savaş kaçağı cezası)
+
+      NEYİ KORUMAZ
+      XP ve seviye puanı korunmaz. Ölünce ikisi de normal şekilde gider. Yani oyuncu eliyle ölürsen yine -50, diğer sebeplerle ölürsen yine -15 seviye puanı kaybedersin.
+
+      NASIL AÇILIR
+      Satın aldığın an kendiliğinden devreye GİRMEZ, elle açılması gerekir:
+      1. Oyunda /envanterkoruma yaz
+      2. Açılan panelde AKTİFLEŞTİR düğmesine tıkla
+      3. İsminin yanında kalkan simgesi görünür
+
+      Kapatmak için /envanterkoruma kapat yazılır. Açıp kapatmak hak harcamaz, yalnızca ölüm harcar. Bu yüzden oyuncu hakkını istediği ana saklayabilir.
+
+      SAVAŞ KİLİDİ
+      Savaş etiketin varken koruma AÇILAMAZ. Bir oyuncuya vurduğun veya vurulduğun anda etiket alırsın ve o sırada komut reddedilir. Kavgaya girmeden önce açman gerekir. Bu kural, dövüşün ortasında kaybettiğini görünce korumaya sarılmayı engeller.
+
+      GÖRÜNÜRLÜK
+      Koruması açık oyuncunun isminin yanında kalkan simgesi görünür ve bunu yakınındaki diğer oyuncular da görür. Koruma kullanıldığında simge kaybolur.
+
+      ÖLDÜREN KİŞİ BİLGİLENDİRİLİR
+      Koruması olan birini öldürdüğünde sana "öldürdüğün oyuncunun envanter koruması vardı, eşyaları düşmedi" mesajı gelir. Böylece eşyaların neden düşmediğini anlarsın.
+
+      HAK HARCAMAYAN DURUMLAR
+      /kill komutu ile kendini öldürmek ve yetkili tarafından öldürülmek hakkı harcamaz, koruma da devreye girmez.
+
+      KOMUTLAR
+      - /envanterkoruma : paneli açar, kalan hakkı ve durumu gösterir
+      - /envanterkoruma ac : korumayı aktifleştirir
+      - /envanterkoruma kapat : korumayı kapatır
+
+      SORUN YAŞARSAN
+      Her tanımlama ve her kullanım kayıt altına alınır. "Satın aldım ama çalışmadı" durumunda Discord'dan (discord.gg/livamc) destek talebi açılır, yetkililer kaydı kontrol edebilir.
 
   - title: "Yeni Oyuncu Rehberi"
     content: |
