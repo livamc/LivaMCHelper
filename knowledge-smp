@@ -1,0 +1,478 @@
+# ============================================================
+#  KnightNWHelper - BILGI TABANI
+#  (Knight Network icin otomatik donusturuldu)
+#  Eklenti yalnizca 'entries' ve 'systems' bolumlerini okur.
+#  Degistirince oyun ici:  /sorai knowledge reload
+# ============================================================
+
+entries:
+  - title: "Sunucu Bilgileri"
+    content: "İsim: Knight Network | IP: play.knightnw.com | Port: 25565 | Sürüm: 1.21.11 | Tür: Skyblock,Survival,Factions | Dil: Türkçe | Kuruluş: 2018 | Site: https://knightnw.com | Discord: https://discord.gg/knightnw"
+  - title: "Sunucu Kuralları"
+    content: "Hile, makro ve tüm zararlı yazılımları kullanmak yasaktır. • Bug bildirilmeden kullanmak veya yararlanmak yasaktır. • Sohbette insanları rahatsız edici cümleler kullanmak yasaktır. • Dolandırıcılık yasaktır. • Yetkililerle saygısız bir şekilde konuşmak yasaktır. • Her türlü reklam ve bağlantı (link) paylaşımı yasaktır. • Kill kasmak veya kastırmak kesinlikle yasaktır. • Burada yazmayan fakat uyulması gereken görgü kuralları dahildir. • Birden fazla AFK hesap ile reklam yapmak yasaktır. AFK hesaplardan yapılan reklam aralığı 10 dakikadan fazla olmalıdır. • AFK halde kasılmak yasaktır (blok kırmak, balık tutmak vb.). Farm ve spawnerlar için AFK bırakmak serbesttir. • AFK client veya başka bir yazılım ile çiftçiden otomatik satış yapmak yasaktır. • Jackpota birden çok hesapla katılmak yasaktır. • Birden fazla hesap ile sezon sıralamasına girmek yasaktır. • Yan hesaplardan eşya toplamak yasaktır. • Kuralların tamamını okumak için /kurallar yazabilirsiniz. • (Tüm kurallar için /kurallar)"
+  - title: "Ekonomi - Genel"
+    content: "Para birimi: Coin. Başlangıç bakiyesi: 500."
+  - title: "Ekonomi - Para Kazanma Yolları"
+    content: "Günlük Ödül: /günlüködül komutunu kullanarak rütbesine göre her 24 saatte bir ödül al; Voting (oy verme): Oyuncu /vote komutuyla sunucuya oy verir ve 15 dakika /adafly + 1 adet oy kasası anahtarı kazan; AH satışı: /ah komutu ile eşyalarını satışa koy; Order satışı: /order üzerinden gelen oyuncu siparişlerini tamamlayarak para kazan.; Görev sistemi: /görev komutu ile seçtiğin görevleri tamamlayarak ödül kazan; Günlük görev sistemi: /günlükgörev ile her gün 3 farklı eşya teslimatı görevi yaparak ödül al; Discord Ödül: /discordödül komutu üzerinden Discord hesabını sunucuya bağlayarak veya discord sunucusuna boost basarak çeşitli ödüller kazan; Oy Serisi: /oyver komutu ile her gün oy vererek oy serisinde ilerleyip çeşitli ödüller kazan"
+  - title: "Ekonomi - Para Harcama"
+    content: "/shop - Ana mağaza, /ah - Açık artırma, /jackpot - Şans oyunları"
+  - title: "Dünya: Spawn"
+    content: "Spawn dünyası, /spawn ile gelinir PvP: kapalı, Grief: kapalı."
+  - title: "Dünya: Skyblock"
+    content: "Skyblock Adası, /is ile gelinir PvP: kapalı, Grief: açık."
+  - title: "Dünya: Madenler"
+    content: "Madencilik için özel dünya, /warp maden PvP: kapalı, Grief: açık."
+  - title: "Dünya: Nether"
+    content: "Nether dünyası, /nether ile gelinir PvP: kapalı, Grief: açık."
+  - title: "Komutlar (general)"
+    content: "/spawn = Doğuş noktasına ışınlanır | /sethome <isim> = Bulunduğun yere ev oluşturur | /home <isim> = Oluşturduğun eve ışınlanır | /delhome <isim> = Oluşturduğun ev kaydını siler | /tpatoggle = Tpa isteği almayı ayarlar | /tpa <oyuncu> = Oyuncuya ışınlanma isteği gönderir | /tpaccept = Size ışınlanma isteği gönderen oyuncunun tpa isteğini kabul eder | /tpdeny = Size ışınlanma isteği gönderen oyuncunun tpa isteğini reddeder | /tpacancel = Oyuncuya gönderdiğiniz ışınlanma isteğini iptal eder | /msg <oyuncu> <mesaj> = Özel mesaj gönderir | /balance = Bakiyeni gösterir | /pay <oyuncu> <miktar> = Para gönderir | /sor <soru> = Al yardımcıya soru sorar (bu komut!) | /afkclient = Afk client kurulumu için linki iletir | /2fa = 2FA kurulumu için kullanılır | /balıksat = Özel balıkları satmak için kullanılan menüyü açar | /balıkçı = Özel balık kataloğunu açar | /baltop = Sunucudaki oyuncuların para miktarını görmeyi sağlar | /adafly = Oyuncunun adalarda uçmasını sağlar | /chest = Oyuncunun kendisine özel sanal sandığını açar | /craft = Sanal crafting table a erişim sağlar | /discord = Discord sunucusunun linkini iletir | /dc = Discord sunucusunun linkini iletir | /ignore <isim> = Oyuncuyu kendinden engeller | /envanterisat = Envanterinde bulunan ürünleri markete satar | /envoy = Sonraki envoy etkinliğine kalan süreyi gösterir | /expşişele <exp miktarı> = Üstündeki expyi şişeler | /farmsat = Özel ekinleri satabileceğin satış menüsünü açar | /gecepazarı = 00:00-06:00 saatleri arasında açılan gecepazarı menüsünü açar | /heal = Canını yeniler | /hesapeşle = Oyun içi hesabını discord hesabın ile eşlemeni sağlar | /hesapeşle kaldır = Oyun hesabının discord eşlemesini kaldırır | /ignorelist = Kendinden engellediğin oyuncuları listeler | /jackpot = Şans oyunu menüsünü açar | /kit = Rütbene göre alabileceğin kitlerin menüsünü açar | /kozmetikler = Özel şapkalar, kostümler ve efektler gibi kozmetik eşyaları yönetebileceğin menüyü açar | /msgtoggle = Özel mesaj alma isteklerini ayarlar | /owarp = Oyuncu warplarını listeler | /owarp remove <owarp ismi> = Belirtilen isimdeki oyuncu warpını kaldırır | /owarp create <owarp ismi> = Belirtilen isimde bir oyuncu warpı oluşturur | /owarp desc set <owarp ismi> <açıklama> = Belirtilen Oyuncu warpının açıklamasını ayarlar | /owarp desc remove <owarp ismi> = Belirtilen oyuncu warpının açıklamasını kaldırır | /owarp icon set <owarp ismi> = Belirtilen oyuncu warpının menü üzerindeki ikonunu oyuncunun elindeki eşya ile değiştirir | /owarp icon remove <owarp ismi> = Belirtilen oyuncu warpının ikonunu sıfırlar | /owarp reset <owarp ismi> = Belirtilen oyuncu warpının yerini değiştirir | /owarp rename <owarp ismi> <yeni owarp ismi> = Belirtilen oyuncu warpının ismini yenisi ile değiştirir | /feed = Açlık barlarını doldurur | /parıltı = Oyuncunun etrafındaki parıltıyı ayarlayabileceği menü | /oyver = Oy sitelerinin linkini iletir | /ödüllerim = Biriken oy ödüllerini verir | /vpclaim all = Biriken oy ödüllerin hepsini birden verir | /çöp = Sanal çöp menüsünü açar | /çiftçi = Claimin içerisinde bulunan çiftçinin menüsünü açar | /warp = Warpların bulunduğu detaylı menüyü açar | /vp = Bir sonraki vote party için gerekli olan oy sayısını gösterir | /repair = Elinde bulunan aleti tamir eder | /repair all = Envanterindeki tüm aletleri tamir eder | /sell all = Envanterindeki tüm ürünleri markete satar | /sell hand = Elinde tuttuğun ürünü markete satar | /sellall <ürün ismi> = Envanterinde bulunan belirttiğin tüm ürünleri markete satar | /report <oyuncu> = Oyuncunun mesajlarını yetkiliye bildirir | /oyserisi = Oy vererek oy serisinde ilerleme kazanıp çeşitli ödüller kazanacağın menüyü açar | /sit = Yere oturtur | /tag = İsminin yanında gözükecek etiketler alacağın menüyü açar | /zindanparti = Zindanlara arkadaşlarınla girebilmek için lobi oluşturur | /pack = Sunucuya özel texture packi indirir | /sure = Oyun içerisindeki toplam oynama süreni gösterir | /cb off = Hologram sohbeti kapatır | /cb on = Hologram sohbeti açar | /profil = Oyuncu profilini açar | /vip = Vip bilgileri menüsünü açar | /büyücü = Özel büyü menüsünü açar | /rütbeler = Sunucudaki rütbelerin detaylı bilgisinin bulunduğu menüyü açar | /rankup = Gerekli koşulların sağlanması halinde rütbe atlamak için kullanılır | /adafly time = Adada uçuş sürenizin ne kadar kaldığını gösterir | /menü = Tüm sistemlerin olduğu menü | /surebak <oyuncu> = Oyuncunun sunucuda geçirdiği toplam süreyi gösterir | /simyacı = Özel büyü kitaplarını ve gizemli tozları birleştirebileceğin menüyü açar | /qs remove = Baktığın sandık marketi kaldırır | /qs price <oyuncu> = Baktığın sandık marketinin fiyatını değiştirir | /qs buy = Baktığın sandık marketini satın alma moduna geçirir | /is sell = Baktığın sandık marketini satış moduna geçirir | /adaoluştur = Oyuna başlamak için ada oluşturmanı sağlar | /is = Adana ışınlanmanı sağlar | /is panel = Ada ile ilgili ayarları görmeni sağlar | /is coop <oyuncu> = Oyuncuya ada içinde geçici olarak izinleri kullanma yetkisi verir | /is invite <oyuncu> = Adanıza oyuncu eklemek için davet gönderir | /is accept <oyuncu> = Davet edildiğin adaya katılmanı sağlar | /is members = Adada ekli oyuncuları gösterir | /is kick <oyuncu> = Ada arkadaşını adadan atmanı sağlar | /is ban <oyuncu> = Adadan oyuncu yasaklamanızı sağlar | /is unban <oyuncu> = Yasaklı oyuncunun yasağı kalkar | /is biome = Ada biyomunu değiştirir | /is blocks = Adada bulunan blockları gösterir | /is chat = Ada içi sohbeti açar | /is close = Adayı ziyaretçilere kapatır | /is open = Adayı ziyaretçilere açar | /is delete = Adayı siler | /is transfer <oyuncu> = Adayı ada içindeki farklı bir oyuncuya devreder | /is info = Adanın bilgisini verir | /is leave = Adadan çıkmanı sağlar | /is level = Ada levelini gösterir | /is sethome = Ada doğma noktasını ayarlar | /is border = Ada sınırı ayarları | /is promote <oyuncu> = Ada üyesinin rütbesini arttırır | /is demote <oyuncu> = Ada üyesinin rütbesini düşürür | /duel <oyuncu> = Oyuncuya düello isteği gönderir | /duel accept <oyuncu> = Düello isteğini kabul eder | /duel deny <oyuncu> = Düello isteğini reddeder | /duel stats <oyuncu> = Oyuncunun düello istatistiklerini gösterir | /duel toggle = Düello isteklerini almayı açar veya kapatır | /teslimat = Belirli eşyaları teslim ederek ödül kazanabileceğin sistemi açar | /sıralama = Teslimat, profil, aylık oyun içi sıralamanın bulunduğu ana menüyü açar | /skin <isim> = Oyun içi skin görünüşünü değiştirmeyi sağlar | /tablo = Scoreboard ın ekranda görünme ayarlarını değiştirir"
+  - title: "Komutlar (economy)"
+    content: "/market = Ana mağaza arayüzünü açar | /ah = Açık artırma sekmesini açar | /order = Oyuncu siparişleri sekmesini açar"
+  - title: "Komutlar (warps)"
+    content: "/warp buzyarışı = Buzyarışı etkinliği alanına ışınlar | /warp labirent = Labirent etkinliği alanına ışınlar | /warp ox = ox etkinliği alanına ışınlar | /warp pinata = Pinata etkinliği alanına ışınlar | /warp büyücü = Özel büyü yerine ışınlar | /warp envoy = Envoy etkinlik alanına ışınlar | /warp cevherçevir = Cevher çevirme alanına ışınlar | /warp jail = Hapis alanına ışınlar | /warp kasa = Kasalara ışınlar | /warp mobcoin = Mobicoin takas alanına ışınlar | /warp sptakas = Spawner parçacık takas alanına ışınlar | /warp zindancoin = Zindan coinlerin takas alanına ışınlar | /warp crimsoncoin = Crimsoncoin takas alanına ışınlar | /warp tamir = Tamirciye ışınlar | /warp parkur = Parkur alanına ışınlar | /warp sezon = Sezon sıralamasına ışınlar | /warp spawn = Spawn bölgesine ışınlar | /warp duelarena1 = 1. Duel arenasına ışınlar | /warp duelarena2 = 2. Duel arenasına ışınlar | /warp duelarena3 = 3. Duel arenasına ışınlar | /warp duelarena4 = 4. Duel arenasına ışınlar | /warp duelarena5 = 5. Duel arenasına ışınlar | /warp duelarena6 = 6. Duel arenasına ışınlar | /warp duelarena7 = 7. Duel arenasına ışınlar"
+  - title: "SSS: Para nasıl kazanılır?"
+    content: "Para kazanmak için /görev yapabilir, /ödül ile günlük ödül alabilir veya /order üzerinden oyunculara eşya satabilirsin."
+  - title: "SSS: VIP nasıl alınır?"
+    content: "VIP paketlerini mağazamız üzerinden satın alabilirsin: https://knightnw.com/store"
+  - title: "SSS: Ev nasıl oluşturulur?"
+    content: "Bulunduğun yerde /sethome <isim> yazarak ev oluşturursun. /home <isim> ile geri dönersin."
+  - title: "SSS: PvP nerede atabilirim?"
+    content: "/duel <oyuncu> komutuyla duel arenasında oyuncu ile pvp atabilirsin. Diğer dünyalarda PvP kapalıdır."
+  - title: "SSS: Hile kullanan oyuncuyu nasıl şikayet ederim?"
+    content: "Discord sunucumuzdan veya web sitemiz üzerinden destek talebi oluşturarak yetkililere bildirebilirsin."
+  - title: "SSS: Yetkili nasıl olunur?"
+    content: "Moderasyon bilginin ve sabrının yeterli olduğunu düşünüyorsan yardımcı başvuru formu üzerinden başvuru yapabilirsin: https://knightnw.com/applications/forms/yardimci-basvurusu"
+  - title: "SSS: Sunucu IP'si nedir?"
+    content: "Sunucuya play.knightnw.com adresi üzerinden bağlanabilirsin."
+  - title: "SSS: Moboion nedir?"
+    content: "Moboion, mob kestikçe düşen özel bir coindir. /warp mobcoin üzerinden kullanabilirsin."
+  - title: "SSS: Kasa anahtarını nasıl kullanabilirim?"
+    content: "Sahip olduğun kasa anahtarına uygun kasayı /warp kasa üzerinden bulup sağ tıklayarak açabilirsin."
+  - title: "SSS: Crypt of Whispers anahtarını nasıl bulurum?"
+    content: "Oy kasasından elde edebilirsin veya moblardan düşen mobcoinleri kullanarak /warp mobcoin üzerinden Crypt of Whispers anahtarı alabilirsin."
+  - title: "SSS: Emberforge Depths anahtarını nasıl bulurum?"
+    content: "Crypt of Whispers zindanından çıkan Emberforge parçasını kullanarak /warp zindancoin üzerinden Emberforge Depths anahtarı alabilirsin."
+  - title: "SSS: Eclipse Sanctum anahtarını nasıl bulurum?"
+    content: "Emberforge Depths zindanından çıkan Eclipse özü ile /warp zindancoin üzerinden Eclipse Sanctum anahtarı alabilirsin."
+  - title: "SSS: Venomshade Catacombs anahtarını nasıl bulurum?"
+    content: "Eclipse Sanctum zindanından çıkan Venomshade kabuğunu kullanarak /warp zindancoin üzerinden Venomshade Catacombs anahtarı alabilirsin."
+  - title: "SSS: Nasıl ada oluştururum?"
+    content: "Ada oluşturmak /adaoluştur komutunu kullanabilirsin."
+  - title: "SSS: Adama nasıl giderim?"
+    content: "/is komutunu kullanarak adana ışınlanabilirsin."
+  - title: "SSS: Kurallara nereden bakabilirim?"
+    content: "/kurallar komutunu kullanarak sunucu kurallarını görüntüleyebilirsin."
+  - title: "SSS: Sunucuda ne kadar zaman geçirdiğime nasıl bakabilirim?"
+    content: "/profil komutu ile toplam oynama süreni ve genel istatistiklerini görebilirsin."
+  - title: "SSS: Destek talebi nasıl oluşturabilirim?"
+    content: "https://knightnw.com/support/tickets adresinden veya /discord komutu üzerinden destek talebi oluşturabilirsin."
+  - title: "SSS: Nether'a nasıl giderim?"
+    content: "/nether komutu ile Nether dünyasına gidebilirsin."
+  - title: "SSS: AFK Client nasıl kurulur?"
+    content: "AFK Client kurulumu hakkında detaylı bilgi almak için https://knightnw.com/knight-network-sunucusunda-afk-birakma bağlantısını inceleyebilirsin."
+  - title: "SSS: Nasıl oy verebilirim?"
+    content: "/oyver komutunu kullandıktan sonra çıkan bağlantılara gidip oyun içi kullanıcı adını girerek oy verebilirsin."
+  - title: "SSS: XP'lerle ne yapabilirim?"
+    content: "XP'lerini kullanmak için /level komutunu kullanabilirsin."
+  - title: "SSS: XP'lerini nasıl şişeleyebilirim?"
+    content: "XP'lerini şişelemek için /expşişele <xp miktarı> komutunu kullanabilirsin."
+  - title: "SSS: Owarp nasıl kurabilirim?"
+    content: "/owarp create <warp ismi> komutu ile oyuncu warpı oluşturabilirsin. Owarp oluştururken hesabından 1 TL çekilir."
+  - title: "SSS: Owarp nasıl silerim?"
+    content: "/owarp remove <warp ismi> komutunu kullanarak oyuncu warpını silebilirsin."
+  - title: "SSS: Komutları nereden görebilirim?"
+    content: "Komutlar hakkında detaylı bilgi almak için /bilgi komutunu kullanabilirsin."
+  - title: "SSS: Jackpot'a nasıl katılırım?"
+    content: "/jackpot komutu ile jackpot sistemine katılabilirsin."
+  - title: "SSS: Oyuncu marketinde nasıl eşya satarım?"
+    content: "Oyuncu marketinde eşya satmak için /om sat <fiyat> <adet> komutunu kullanabilirsin."
+  - title: "SSS: TPA nasıl atabilirim?"
+    content: "Bir oyuncuya ışınlanma isteği göndermek için /tpa <isim> komutunu kullanabilirsin."
+  - title: "SSS: Günlük ödül sistemi var mı?"
+    content: "Evet. /günlüködül komutu ile her 24 saatte bir rütbene uygun ödül alabilirsin."
+  - title: "SSS: Kilit nasıl atabilirim?"
+    content: "Eline bir tabela alıp sandık, spawner veya kapının üzerine yerleştir. İlk satıra [kilit], alt satıra ise oyun içi adını yazarak kilitleyebilirsin."
+  - title: "SSS: Envoy nedir?"
+    content: "Envoy, her 30 dakikada bir otomatik başlayan etkinliktir. /warp envoy bölgesine rastgele sandıklar düşer. Bu sandıkları açarak çeşitli ödüller kazanabilirsin."
+  - title: "SSS: Oyuncu warplarına nasıl bakabilirim?"
+    content: "/owarp komutu ile sunucudaki tüm oyuncu warplarını görüntüleyebilirsin."
+  - title: "SSS: Order sistemi var mı?"
+    content: "Evet. Sunucuda Order sistemi bulunmaktadır. /order komutu ile aktif siparişleri görüntüleyebilirsin."
+  - title: "SSS: Rütbe nasıl atlayabilirim?"
+    content: "/rütbe üzerinden gerekli şartları tamamladıktan sonra /rankup komutunu kullanarak rütbe atlayabilirsin."
+  - title: "SSS: Rütbelere nasıl bakabilirim?"
+    content: "/rütbe komutu ile sunucudaki tüm rütbeleri ve avantajlarını detaylı şekilde inceleyebilirsin."
+  - title: "SSS: Discord sunucusunun linki nedir?"
+    content: "discord.gg/knightnw ile Discord sunucusunun ulaşabilirsin."
+  - title: "SSS: Site linki nedir?"
+    content: "https://knightnw.com/ ile web sitemize ulaşabilirsin."
+  - title: "SSS: Meslek sistemi var mı?"
+    content: "Hayır. Meslek sistemi yerine sunucuda görev sistemi bulunmaktadır. /görev üzerinden görev yaparak para kazanabilirsin."
+  - title: "SSS: Tab listesindeki oyuncuların yanında duran şekiller nedir?"
+    content: "Oyuncu etiketlerini ve rozetlerini görmek için /tag komutunu kullanabilirsin."
+  - title: "SSS: VIP'lerde hangi özellikler var?"
+    content: "/vip komutu ile VIP paketlerinin avantajlarını detaylı şekilde inceleyebilirsin."
+  - title: "SSS: Spawner parçacıkları ile ne yapabilirim?"
+    content: "Spawner parçacıkları ile /warp sptakas üzerinden spawner alabilirsin."
+  - title: "SSS: Önceden verdiğim oy ödüllerini nasıl alabilirim?"
+    content: "/ödüllerim veya /vpclaim all komutları ile biriken oy ödüllerini alabilirsin."
+  - title: "SSS: Spawner parçacığını nasıl bulabilirim?"
+    content: "Spawner parçacıklarını /warp kasa, zindanlar ve envoy etkinlikleri gibi çeşitli sistemlerden elde edebilirsin."
+  - title: "SSS: Gece Pazarı nedir?"
+    content: "Gece Pazarı, her gece 00:00 ile 06:00 saatleri arasında açılan özel markettir. Bu markette indirimli veya normalde sunucuda bulunmayan özel ürünler satılır."
+  - title: "SSS: Balıkları nereye satabilirim?"
+    content: "Kilolu balıkları /balıksat komutu üzerinden satabilirsin."
+  - title: "SSS: Teslimat sistemi nedir?"
+    content: "Teslimat sistemi, belirlenen ürünleri teslim ederek aylık sıralamada dereceye girerek kredi ödülü elde edebildiğin bir sistemdir."
+  - title: "SSS: Sunucuda özel büyüler var mı?"
+    content: "Evet. Sunucuda birçok özel büyü bulunmaktadır. Detaylı incelemek için /büyücü komutunu kullanabilirsin."
+  - title: "SSS: Özel büyü kitaplarını nasıl birleştirebilirim?"
+    content: "Aynı türdeki büyü kitaplarını /simyacı üzerinden birleştirerek seviyelerini yükseltebilirsin."
+  - title: "SSS: Çiftçi ne işe yarar?"
+    content: "Çiftçi, adadaki belirli ekinleri otomatik ekip biçer ve moblardan düşen et, deri, yün vb. şeyleri toplar. Siz sadece toprağa: buğday, havuç, patates, kuma: kaktüs, şeker kamışı, orman ağacına: kakao ekin. Çiftçi bu farmların büyüme animasyonunu size göstermeden otomatik ekip biçer. 1 kere farmı ekmeniz yeterli. Sonra çiftçi sonsuza kadar kendisi ekip biçer. Çiftçi tüm adanızı kapsar. İster adanız 75x75 isterseniz 300x300 olsun yine her yerdeki farmları görür ve toplar. Çiftçi NPC bazen gözükmeyebilir. Endişelenmeyin çiftçi paneline /çiftçi yazıp adanın her noktasından ulaşabilirsiniz."
+  - title: "SSS: Çiftçiyi nereden alabilirim?"
+    content: "Çiftçi yumurtası oyuna ilk girdiğinde envanterinde olur."
+  - title: "SSS: Sandık market nasıl kurabilirim?"
+    content: "Satmak istediğin ürünü eline alıp sandığa vurduktan sonra sohbet ekranına ürünün adet fiyatını yazarak sandık market oluşturabilirsin. Marketi alış moduna geçirmek için sandığa bakarak /qs buy komutunu kullanabilirsin."
+  - title: "SSS: Hologram sohbeti nasıl açabilirim?"
+    content: "/cb on komutu ile hologram sohbetini açabilirsin."
+  - title: "SSS: Hologram sohbeti nasıl kapatabilirim?"
+    content: "/cb off komutu ile hologram sohbetini kapatabilirsin."
+  - title: "SSS: Sethome'mi nasıl silebilirim?"
+    content: "/delhome <isim> komutu ile önceden oluşturduğun ev kaydını silebilirsin."
+  - title: "SSS: Spawner nasıl kazanabilirim?"
+    content: "Spawner kazanmanın birçok yolu vardır. Envoy etkinliğinden kazanabilirsin, spawner parçacıkları ile /warp sptakas üzerinden alabilirsin, kasalardan kazanabilirsin, /level üzerinden, /kristal üzerinden veya sitemiz üzerinden satın alabilirsin."
+  - title: "SSS: Adama nasıl oyuncu eklerim?"
+    content: "/is invite <oyuncu ismi> komutu ile oyuncuya adaya katılma daveti atabilirsin. Oyuncu /is accept ile daveti kabul edebilir."
+  - title: "SSS: Bir oyuncuyu adamdan nasıl yasaklayabilirim?"
+    content: "/is ban <oyuncu ismi> komutu ile oyuncuyu adandan yasaklayabilirsin."
+  - title: "SSS: Coop nedir nasıl verebilirim?"
+    content: "Coop oyuncuya adada kısa süreli yetki vermeni sağlar. /is coop <oyuncu> ile yetki verebilir ve /is uncoop <oyuncu> ile yetkisini geri alabilirsin."
+  - title: "SSS: Zindandan neler kazanılıyor?"
+    content: "Her zindanda bulunan ganimetler farklıdır. Tüm zindanların ganimetlerini /zindan komutu üzerinden görebilirsin."
+  - title: "SSS: Birine nasıl mesaj gönderebilirim?"
+    content: "Bir oyuncuya /msg <oyuncu ismi> <mesaj> komutu ile özel mesaj gönderebilirsin."
+  - title: "SSS: Eşyamı nasıl tamir edebilirim?"
+    content: "Hasar almış eşyamı elinde tutarak /repair komutunu kullanıp eşyamı tamir edebilirsin."
+  - title: "SSS: Duel nedir?"
+    content: "Düello sistemi, sunucunun sana verdiği kitler ve düellolara özel olan arenalarda PvP atabileceğin bir alandır."
+  - title: "SSS: Kit nasıl alabilirim?"
+    content: "Mevcut rütbene uygun kiti görüntülemek ve almak için /kit komutunu kullanabilirsin."
+  - title: "SSS: Kaç tane sethome kurabilirim?"
+    content: "Oyuncuların başlangıçta 1 adet sethome kurma hakkı vardır. Bu hakkını rütbe atlayarak veya VIP alarak artırabilirsin. Detaylı bilgi için /rütbe ve /vip menülerine göz atabilirsin."
+  - title: "SSS: Ölünce eşyalarım yere düşer mi?"
+    content: "Skyblock dünyasında ölürsen eşyaların yere düşmez."
+  - title: "SSS: Ada içinde savaş açık mı?"
+    content: "Hayır, ada içerisinde oyuncuların birbirine vurması kapalıdır."
+  - title: "SSS: Adaylı nasıl alabilirim?"
+    content: "Claimfly'ı /vote vererek alabilirsin her votede 15 dakika /adaylı süresi verilir veya /vip satın alarak sınırsız adayla sahip olabilirsin."
+  - title: "SSS: Zindanda ölürek itemler gidiyor mu?"
+    content: "Hayır, zindanda öldüğünde itemlerin yere düşmez."
+  - title: "SSS: Zindan coinlerini nerede kullanabilirim?"
+    content: "Zindanlardan bulduğun zindan coinlerini /warp zindan alanında kullanabilirsin."
+  - title: "SSS: Ada levelimi nasıl arttırabilirim?"
+    content: "Ada levelini arttırmak için /levelblok da bulunan blockları adana koyman gerekir"
+  - title: "SSS: Metin taşı nedir nasıl giderim?"
+    content: "Metin taşlarını kırarak değerli ganimetler alabilirsiniz /warp metin ile Metin taşlarının olduğu yere ışınlanabilirsiniz."
+  - title: "SSS: Adada en fazla kaç kişi oluyor?"
+    content: "Adada ilk başta 4 üye bulunabilir /yükseltmeler ile adadaki üye sayısını 9'a kadar çıkarabilirsiniz veya /site den 8, 12, 16 kişilik ada satın alabilirsiniz"
+  - title: "SSS: AH'taki eşyanın süresi bitince nereye gidiyor?"
+    content: "Oyuncu marketine koyduğun eşyanın süresi bittiğinde /ah içerisinde bulunan depoya gider."
+  - title: "SSS: Spawner seviyesi nasıl arttırılır?"
+    content: "Aynı türden spawnerları Shift + sağ tık yaparak üst üste koyabilir ve spawner seviyesini arttırabilirsin. Seviye arttırmanın üretim hızına etkisi yoktur, sadece daha az yer kaplamasını sağlar."
+  - title: "SSS: Spawnerı kırmak için ipeksi gerekiyor mu?"
+    content: "Hayır, herhangi bir kazma ile spawnerı kırabilirsin ve spawner envanterine gelir."
+  - title: "SSS: Özel büyü kitaplarını nasıl alabilirim?"
+    content: "Özel büyü kitaplarını /büyücü üzerinden satın alabilirsin."
+  - title: "SSS: Özel büyü kitaplarının başarı oranını arttırmanın bir yolu var mı?"
+    content: "Evet, özel büyü kitaplarının başarı oranını gizemli toz kullanarak arttırabilirsin."
+  - title: "SSS: Gizemli toz nedir?"
+    content: "Gizemli toz, özel büyü kitaplarının başarı oranını arttırmaya yarayan bir tozdur. /büyücü üzerinden satın alabilir ve kitabına sağ tıklayarak başarı oranını yükseltebilirsin."
+  - title: "SSS: Gece pazarı saat kaçta açılıyor?"
+    content: "Gece Pazarı her gün 00:00 ile 06:00 saatleri arasında oyuncuların kullanımına açılır."
+  - title: "SSS: Ada üye nasıl atarım"
+    content: "/is kick ile adadaki üyeyi atabilirsin."
+  - title: "SSS: Adamda kimlerin üye olduğunu nasıl görebilirim?"
+    content: "/is members komutu ile ada üyelerini görebilirsin."
+  - title: "SSS: Adadan nasıl çıkarım?"
+    content: "/is leave komutu ile mevcut adandan ayrılabilirsin. Eğer sahibi senden /is delete ile adanı silerek çıkabilirsin."
+  - title: "SSS: Adamda kimlerin coop olduğunu nereden görürüm?"
+    content: "/is coops komudu ile görebilirsin"
+  - title: "SSS: Evime nasıl ışınlanırım?"
+    content: "/home <isim> komutu ile kayıt ettiğin evine ışınlanabilirsin."
+  - title: "SSS: TPA isteğini nasıl kabul ederim?"
+    content: "/tpaccept komutu ile gelen ışınlanma isteğini kabul edebilirsin."
+  - title: "SSS: TPA isteğini nasıl reddederim?"
+    content: "/tpdeny komutu ile gelen ışınlanma isteğini reddedebilirsin."
+  - title: "SSS: AH'ye yanlış eşya koydum nasıl kaldırabilirim?"
+    content: "/ah menüsünde bulunan sattığın eşyalar kısmından satışa koyduğun eşyanın üzerine tıklayarak iptal edebilirsin."
+  - title: "SSS: Başka oyuncuya nasıl para gönderebilirim?"
+    content: "/pay <oyuncu ismi> <miktar> komutu ile başka oyunculara para gönderebilirsin."
+  - title: "SSS: Spawner çalışmıyor neden?"
+    content: "Her spawnerin çalışma gereksinimi farklıdır. Işık, karanlık, su veya özel blok gereksinimlerini kontrol etmelisin."
+  - title: "SSS: Çiftçinin deposunu nasıl açarım?"
+    content: "Çiftçiye sağ tıklayarak deposunu açabilirsin."
+  - title: "SSS: Çiftçi koydum ama gözükmüyor, menüsünü nasıl açabilirim?"
+    content: "/çiftçi komutunu kullanarak menüsünü açabilirsin."
+  - title: "SSS: Discord hesabımı nasıl bağlarım?"
+    content: "/hesapeşle komutunu yazdıktan sonra sohbete gelen kodu Discord sunucumuzdaki KNIGHTNW botuna özel mesaj olarak göndererek hesabını bağlayabilirsin."
+  - title: "SSS: Oyun hesabımı eşleyince ödül kazanıyor muyum?"
+    content: "Evet, /discordödül menüsünden hesabını eşlediğinde kazanacağın ödülleri görüntüleyebilirsin."
+  - title: "SSS: Jackpot neden başlamıyor?"
+    content: "Jackpot etkinliğinin başlayabilmesi için en az 2 oyuncunun katılmış olması gerekir."
+  - title: "SSS: Maden nedir kazmama nasıl maden büyüsü basarım"
+    content: "Maden sunucunun oluşturduğu bir warptır /maden ile ışınlanabilir orada blok kırarak üst seviye madenleri açabilirsiniz. Kırdığınız blocklardan token kazanarak kazmanıza maden için özel büyüleri basabilirsiniz. Madende kazmanıza sağ tıklayarak büyüleri gorebilirsiniz"
+  - title: "SSS: Maden kasası nerede"
+    content: "/warp maden de maden kasası bulunur. Madende block kırınca belirli oranlarda maden kasası çıkma ihtimali bulunmaktadır. Bu oran madene özel büyülerle arttırılabilir."
+  - title: "SSS: Crimsoncoin nedir"
+    content: "Crimsoncoin, nether adanızda yumru kırdığınızda rastgele miktarda gelen coindir. Bunlari /warp crimsoncoin de takaslayabilirsiniz"
+  - title: "SSS: Envoy kaç dakikada bir oluyor?"
+    content: "Envoy etkinliği her 30 dakikada bir otomatik olarak başlar ne kadar süresi kaldığına bakmak için /envoy yazabilirsin."
+  - title: "SSS: Voteparty nedir?"
+    content: "Sunucuda toplam 100 oy verildiğinde otomatik olarak başlayan bir etkinliktir ve oyunculara envanter ödülleri verir."
+  - title: "SSS: Sandıkları kolay satmanın bir yolu var mı?"
+    content: "/sandıksatar ile içinde eşya olan sandıklarını tek vuruşla direkt markete satabilirsin."
+  - title: "SSS: Değer blok nedir, nereden bakabilirim"
+    content: "Değer blocklar ada değerini arttıran blocklardır /değerblok ile neler olduğuna bakabilirsin."
+  - title: "SSS: Para nasıl kazanabilirim?"
+    content: "Para kazanmanın birçok yolu vardır. Bunlardan bazıları: /görev yapmak, /order komutu ile oyunculara eşya satmak ve /warp farm daki farmları yapmaktır."
+  - title: "Etkinlik: Envanter Eventi"
+    content: "Zaman: Her gün 18:00 ve 20:00 saatlerinde otomatik. Ödül: Aktif tüm oyunculara 2 adet Event Kasa Anahtarı, 6 adet Avcı Kasa Anahtarı, 12 adet Elmas, 32 adet Demir, 4 adet Zümrüt, 24 adet Altın"
+  - title: "Etkinlik: Vote party"
+    content: "Zaman: Her 100 vote verildiğinde otomatik. Ödül: Aktif tüm oyunculara 2 adet Event Kasa Anahtarı, 6 adet Avcı Kasa Anahtarı, 12 adet Elmas, 32 adet Demir, 4 adet Zümrüt, 24 adet Altın"
+  - title: "Etkinlik: Envoy"
+    content: "Zaman: 2 saatte 1 kere. Ödül: Rastgele ganimetler çıkmaktadır"
+  - title: "Etkinlik: Saatlik Görev Etkinliği"
+    content: "Zaman: Saatte 1 kere. Ödül: Rastgele ödüller"
+
+systems:
+  - title: "Ek Bilgiler"
+    content: |
+      - Sunucumuz 24/7 çevrimiçidir, lag olursa Discord'dan bildir
+      - Eşyalarını koruman için /sethome ile evini kaydet
+      - Açık artırma evi en aktif yerimizdir, oradan ucuz eşya bulabilirsin
+      - Yeni başlayanlar /kit baslangic ile başlangıç paketi alabilir
+  - title: "Envoy Etkinliği"
+    content: |
+      envoy 30 dakikada 1 olmaktadır.
+      Envoy'a katılmak için /warp envoy yazabilirsiniz.
+      Rastgele yerlere sandıklar düşmektedir. Bu sandıklara tıklayarak açarak rastgele değerli eşyalar kazanabilirsiniz.
+  - title: "Zindan Sistemi"
+    content: |
+      4 adet zindan bulunmaktadır Zindanlar birbirine bağlı ilerleyen bir sistemdir ve her zindan bir sonrakinin anahtarını üretmek için kullanılır
+      Zindanlarda ilerlemek için mobları kesmeniz gerekir
+      
+      Crypt of Whispers zindanı
+      Zindana Crypt of Whispers anahtarına sağ tıklanarak girilir
+      Moblardan düşen Mobicoin'ler /warp mobcoin üzerinden zindan coin takasında birleştirilerek Crypt of Whispers anahtarı elde edilir
+      İçerisinden Netherite hurdası, spawner parçacığı, değerli cevherler, event ve avcı kasaları, çömlek parçaları, demirci şablonları, sınama anahtarları, XP iksiri, ok türleri, mobcoin gibi ganimetler çıkar
+      
+      Emberforge Depths zindanı
+      Zindana Emberforge Depths anahtarına sağ tıklanarak girilir
+      Crypt of Whispers zindanında düşen Emberforge parçası toplanır ve /warp zindancoin üzerinden zindan coin sistemi ile birleştirilerek Emberforge Depths anahtarı üretilir
+      İçerisinden Netherite hurdası, spawner parçacığı, değerli cevherler, event ve avcı kasaları, çömlek parçaları, XP iksiri ,ender incisi ,shulker kabuğu gibi ganimetler çıkar
+      
+      Eclipse Sanctum zindanı
+      Zindana Eclipse Sanctum anahtarına sağ tıklanarak girilir
+      Anahtar Emberforge Depths zindanından düşen Eclipse özü toplanır ve /warp zindancoin üzerinden zindan coin sistemi ile birleştirilerek Eclipse Sanctum anahtarı üretilir.
+      İçerisinden Netherite hurdası ,spawner parçacığı, değerli cevherler, event ve avcı kasaları, çömlek parçaları, XP iksiri, ender incisi, shulker kabuğu, büyülü altın elma, gürz ve mızrak gibi ganimetler çıkar
+      
+      Venomshade Catacombs zindanı
+      Zindana Venomshade Catacombs anahtarına sağ tıklanarak girilir
+      Eclipse Sanctum zindanından düşen Venomshade kabuğu toplanır ve /warp zindancoin üzerinden zindan coin sistemi ile birleştirilerek Venomshade Catacombs anahtarı üretilir
+      İçerisinden Netherite hurdası ,spawner parçacığı, değerli cevherler, event ve avcı kasaları, çömlek parçaları, XP iksiri, ender incisi, shulker kabuğu, büyülü altın elma, gürz ve mızrak gibi ganimetler çıkar
+  - title: "Mevsim Sistemi"
+    content: |
+      4 adet mevsim bulunmaktadır her mevsimin farklı özellikleri vardır mevsimden mevsime özellikler vardır. mevsimler 30 oyun günü sürmektedir
+      
+      Kış Mevsimi oyun modu zora alınır kurtlar, tilkiler, kardan adamlar, ve kutup ayıları doğar iskeletler sereriye dönüşür buz ve kar gibi yerlerde donabilirsiniz ateş gerekir.
+      
+      İlkbahar Mevsimi oyun modu normal moda alınır daha fazla arılar, tavşanlar ve zararsız hayvanlar doğar
+      
+      Yaz Mevsimi oyun modu kolay moda alınır oselolar, pandalar ve papağanlar doğar zombiler zombi kurusuna dönüşür
+      
+      Sonbahar Mevsimi oyun modu normal moda alınır yarasalar, örümcekler, tilkiler moshroomlar, ve kurbağalar doğar yaratıklar balıkabağı verir
+  - title: "Ada Sistemi"
+    content: |
+      Skyblocka başlamak için adaya sahip olunması gerekir /adaoluştur ile ada oluşturulur.
+      Adalar projeleriniz için size gerekli alan sağlar.
+      Her adada bir nether portalı vardır. Bu nether portalından geçerek Nether Adanıza ışınlanılır. Nether adası nether yumrularını ekmek için vardır.
+  - title: "Ada üyesi sistemi"
+    content: |
+      Adada birden fazla oyuncunun oynayabilmesini sağlar, 1 adada ilk başta en çok 4 üye bulunabilir bu miktar /yükseltmeler veya /site den arttırılabilir.
+      Adaya oyuncuların görebileceği warplar oluşturabilirsiniz
+      Ada için adaya özel sohbet bulunur /is chat ile bu sohbet açılabilir.
+      Özel ada sohbetine sadece ada üyeleri yazı yazabilir ve görebilir.
+  - title: "Coop Sistemi"
+    content: |
+      Coop sistemi oyunculara Skyblock adasında geçici izin verir, izinlerin neler olduğunu görmek ve ayarlamak için /is panel.
+      Oyunculara adada izin /is coop <oyuncu ismi> ile verilip /is uncoop <oyuncu ismi> ile kaldırılabilir. İzin verilen oyuncu oyundan çıktığında adadaki izini gider.
+  - title: "Özel Büyüler"
+    content: |
+      Özel büyüler saldırı savunma ve alet büyüleri olmak üzere 3 kategoriye ayrılır
+      Özel büyü kitapları 60.000 EXP ve 5000 kristal karşılığında elde edilir her büyü rastgele verilir ve eşyaya uygulanırken başarı veya başarısızlık ihtimali bulunur.
+      Büyülerin başarı oranını artırmak için gizemli toz kullanılabilir gizemli tozlar 75.000 EXP karşılığında alınır ve aynı seviyedeki 2 gizemli toz birleştirilerek daha yüksek seviyeli gizemli toz elde edilir
+      Her büyünün ulaşabileceği maksimum bir seviye vardır aynı tür ve seviyedeki 2 büyü kitabı /simyacı üzerinden birleştirilerek daha yüksek seviyeli büyü kitabı oluşturulabilir
+      Bir eşyaya başlangıçta en fazla 3 özel büyü uygulanabilir bu limit slot arttırıcı kullanılarak maksimum 6 slota kadar yükseltilebilir
+      Slot arttırıcılar 4 slot 5 slot ve 6 slot olarak ayrılır ayrıca alet saldırı ve zırh büyüleri için farklı slot arttırıcı türleri bulunmaktadır
+      Slot arttırıcıların da başarı ve başarısızlık ihtimali vardır bu başarı oranı artırılamaz.
+  - title: "Vote Party"
+    content: |
+      Sunucuda her 100 vote verildiğinde otomatik olarak envanter eventi başlar
+      Her eventte bu sayaç sıfırlanır
+  - title: "Mobcoin"
+    content: |
+      Mob kestikçe rastgele bir oranla içerisinden mobcoin çıkar
+      Bu coin /warp mobcoin de kullanılır
+  - title: "Cevher çevirme"
+    content: |
+      Cevherler /warp cevherçevir de bir üst cevher ile takas edilebilir.
+  - title: "Teslimat Sistemi"
+    content: |
+      Teslimat sistemi Mob Öldürme, Maden, Tarım, ve Balık olarak 4 sabit kategori üzerinden ilerler Bu kategorilerden 1 tane aylık olarak değişmektedir o ay kategoride ne olacağına yetkililer karar verir
+      /teslimat ile en çok kategorisine göre ürün teslim eden ilk 3 oyuncuya site kredisi ödülü verilir
+      Teslimat sistemi her ay sıfırlanır ve yeniden başlar
+      Değişebilen kategoride genelde rekabeti dengeleyebilmek için yeni oyuncularında kolay bir şekilde kasabileceği bir eşya olur
+  - title: "Owarp Sistemi"
+    content: |
+      Owarplar oyuncuların kendi claimine kurabildiği özel warp ışınlanma alanlarıdır Diğer oyuncular /owarp komutuyla bu owarpları görüp gelerek eşya satın alabilir veya eşya satabilir
+  - title: "Açık Artırma (AH)"
+    content: |
+      Oyuncuların eşyalarını satışa çıkarabileceği bir sanal markettir
+      Oyuncu /om sell fiyat adet komutu ile eşyasını satışa çıkarabilir
+      Diğer oyuncular ise /ah komutu ile bu eşyaları görüp kendilerine uygun olanları satın alabilir
+      Oyuncu marketine eşya koymanın sınırı vardır bu sınır vip veya rank alarak arttırılabilir Her eşyanın markette durma süresi vardır bu süre dolduğunda eşya oyuncunun /ah üzerinde bulunan deposuna taşınır
+      Depodan belirli bir süre içerisinde almaz ise eşya yok olur
+  - title: "Order Sistemi"
+    content: |
+      /order Oyuncuların istediği eşyayı satın almak için ilan oluşturduğu sekmedir Burada oyuncular istediği ürünü seçerek adet başına kaç tl vereceğini belirleyebilir Diğer oyuncular ise /order komutu ile bu sekmeyi açarak kendilerine uygun olan eşyayı bulup kasarak buraya satabilir
+  - title: "Rütbeler (Detay)"
+    content: |
+      Rütbeleri /rütbe ile görebilirsiniz. Rütbe atlamak için gerekli koşulları sağlamak gerekir daha sonra /rankup yazarak diğer rütbeye yükselebilirsiniz Her rütbenin farklı özellikleri ve avantajları vardır
+  - title: "VIP Paketleri"
+    content: |
+      Vipler 6 vip olmak üzere ayrılır İsimleri VIP, VIP+, MVIP, KVIP, KVIP+ ve Sponsor'dur Vipler sadece site üzerinden satın alınabilir oyun içerisinden elde edilemez Her vipin farklı özellikleri ve avantajları vardır
+  - title: "Oy Verme"
+    content: |
+      Oyuncu her siteden oy verdiğinde kendisine 15 dakika /adafly ve 1 adet oy kasası anahtarı verilir Oyuncu her siteden oy verdiğinde /oyserisi üzerinde ilerleme sağlar bu ilerlemesi sayesinde farklı ödüller kazanır
+  - title: "Hesap Eşleme"
+    content: |
+      Oyuncu /hesapeşle komutunu kullanarak oyun hesabı ile discord hesabını eşleyebilir bu sayede discord sunucusu üzerinden onaylı üye ve vipi varsa vipine göre bir rol sahibi olur Discord üzerinden destek talebi oluşturabilmek için hesapeşle yapılması gerekir
+  - title: "Kasa Anahtarları"
+    content: |
+      Kasalar 7 adet farklı kasa olmak üzere ayrılır Efsanevi Kasa, Büyülü Kasa, Spawner Kasa site üzerinden satın alınır Event Kasa, Karma Kasa, Para kasası, Maden kasa oyun içi etkinliklerden ve zindandan kazanılır Oy Kasası sunucuya oy verdiğinizde kazanılır Her kasanın ödülü farklıdır
+  - title: "Spawnerlar"
+    content: |
+      Sunucuda toplam 15 adet spawner bulunmaktadır Spawnerlar zararsız ve zararlı olmak üzere 2 kategoriye ayrılır Zararsız spawnerlar Koyun, İnek, Tavuk, Domuz Zararsız mob spawnerlarının çalışması için aydınlık bir alan gerekir Golem ve Bakır Golem spawnerları ise sadece aydınlık bir alanda çalışır
+      Zararlı spawnerlar Zombi, İskelet, Örümcek, Mağara Örümceği, Blaze, Zombileşmiş Piglin spawnerlarıdır
+      Zararlı mob spawnerlarının çalışması için karanlık bir ortam gereklidir
+  - title: "Balıkçılık"
+    content: |
+      Sunucuda normal minecrafttan farklı bir balık tutma sistemi vardır. Su, lav ve boşluk olmak üzere 3 yerde balık tutabilirsiniz.
+      Tutulan balıklar kiloluk olarak gelir.
+      Kilolu balıkları /balıksat ile satarak kilosuna göre para kazanılabilir
+      /balıkçılık ile tuttuğunuz tüm balıkları görebilirsiniz
+  - title: "Düello"
+    content: |
+      Oyuncuların anlaşmalı bir şekilde sunucunun oluşturduğu kitler ve arenalarda pvp atabileceği bir sistemdir
+  - title: "Sandık Market"
+    content: |
+      Oyuncuların sandık üstünden eşya satmasına yarayan bir sistemdir
+      Bu sistemde alış ve satış yapılabilir
+  - title: "Görev Sistemi"
+    content: |
+      Görevler Madencilik Avcılık Tarım Toplayıcılık ve Günlük Görev olmak üzere 5 e ayrılır
+      Madencilik görevleri maden kazılarak tamamlanır
+      Avcılık görevleri mob öldürerek tamamlanır
+      Tarım görevleri tarım yaparak tamamlanır
+      Toplayıcılık görevleri doğadan eşya toplayarak tamamlanır
+      Günlük görevlerde ise her gün belirlenen 3 ürünü /günlükgörev sistemine teslim ederek tamamlanır
+      Her görev türünde ilerledikçe kazanılan para miktarı artar
+  - title: "Çiftçi Sistemi"
+    content: |
+      Çiftçi yumurtası oyuna ilk girdiğinizde verilir. Çiftçi adanızda deposunda olan yere düşen eşyaları otomatik olarak deposuna toplar ve belirli ekinleri otomatik ekip biçer.
+      Bu depo üzerinden ürünü envanterinize alabilir veya direkt olarak çiftçinin deposu üzerinden satabilirsiniz
+      Ürünleri çiftçinin deposu üzerinden satmanız durumunda kazandığınız paranın %1 ini çiftçi komisyon olarak alır.
+      Çiftçi seviyesi arttıkça çiftçinin satışlardan alacağı komisyon miktarıda her seviyede artmaktadır
+      Seviyesi arttıkça çiftçinin depolama miktarıda her seviyede artmaktadır.
+  - title: "Kozmetikler"
+    content: |
+      Kozmetikler belirli rütbelerin ve viplerin erişebildiği özel bir menüdür
+      Bu menüde 9 farklı kategori vardır Bunlar Şapkalar, Hareketli şapkalar, Parçacıklar, Kostümler, Evcil Hayvanlar, Minyatürler, Afişler, Emojiler, Pelerinler şeklindedir Kozmetiklerin oyun içindeki rekabete bir etkisi yoktur sadece görünüş amaçlı kullanılır
+  - title: "Market"
+    content: |
+      Sunucunun eşya sattığı markettir /market ile ulaşılabilir Oyuncular buradan para karşılığı sunucunun belirlediği eşyaları satın alabilir
+  - title: "Tamirci"
+    content: |
+      Oyuncuların elinde tuttuğu veya envanterinde bulunan hasar görmüş eşyaları tamir etmeye yarayan sistemdir Tamirci rütbesi yetersiz olan oyunculardan eşya tamir etmek için bir miktar para alır Viplerin hepsinde tamir sistemi ücretsizdir
+  - title: "Günlük Ödül"
+    content: |
+      Oyuncuların rütbesine veya vipsine göre 24 saatte bir belirli ödüller alabileceği bir menüdür Her rütbe ve vip için farklı ödüller bulunur
+  - title: "Discord Ödülü"
+    content: |
+      Sunucu içerisindeki hesabınızı discorddaki hesabınız ile eşlemeniz durumunda fazladan bir günlük ödül eklenmektedir
+      Hesap eşleme ödülü 8 adet event kasası anahtarı, 8 adet avcı kasası anahtarı, 3.000 oyun içi bakiye, 5.000 expdir
+      Discord sunucusuna nitro boost bastığınız zaman haftada bir kere alabileceğiniz bir ödül eklenmektedir
+  - title: "Özel Texture Pack"
+    content: |
+      Sunucuya özel belirli eşyaların görünüşünü değiştiren texture packtir Sunucuda dekorasyon amaçlı texture packlı mobilyalar mevcuttur bu mobilyaları oyuncular evlerinde kullanabilir
+      Mobilyalar /market üzerinden 1000 oyun içi bakiye karşılığında alınır
+      Texture packlı setler ve aletlerde bulunmaktadır
+      Kasaların hepsinde özel texture pack görünüşü mevcuttur
+  - title: "Ada Fly"
+    content: |
+      Oyunculara adalarda uçma yetkisi verir
+      Oy vererek oy 15 dakika ada fly /vip için sınırsız adafly kazanılır. /adafly kullanılır Belirli bir süresi vardır süre bittiğinde uçma yetkisi iptal edilir
+  - title: "Jackpot"
+    content: |
+      Jackpot oyuncuların para yatırdığı şans oyunlarıdır En az 2 oyuncu jackpota katılınca oyun başlar Oyuncular para havuzuna para yatırır süre bittiğinde ise rastgele bir oyuncu seçilir ve oyuncuların yatırdığı tüm parayı kazanır Jackpot Basic Jackpot, Standart Jackpot ve Premium Jackpot olmak üzere 3 e ayrılır Basit Jackpot için Minimum giriş miktarı 1 oyun içi bakiye, Maksimum 100 oyun içi bakiyedir Standart Jackpot için Minimum giriş miktarı 1000 oyun içi bakiye, Maksimum 10000 oyun içi bakiyedir Premium Jackpot için Minimum giriş miktarı 1000 bakiye, Maksimum 100.000 oyun içi bakiyedir
+  - title: "Gece Pazarı"
+    content: |
+      Her gece 00:00 ve 06:00 saatleri arasında açılan sunucunun marketidir Oyuncular buradan ucuz fiyatla oyun içerisinde bulunması zor olan eşyaları alabilir Her eşya için belirli bir stok sayısı vardır
+  - title: "Maden Warpı"
+    content: |
+      Sunucunun oluşturduğu bir warptır Bu warpta madenleri kırabilir ve maden seviyenizi arttırabilirsiniz. Ayrıca kırdığınız bloklardan token kazanarak kazmanızı geliştirebilirsiniz.
+  - title: "Oyuncu Profili"
+    content: |
+      Oyuncunun oyun içerisinde bilgilerini detaylı bir şekilde gösterir /profil komutuyla açılabilir Oyuncunun mevcut yetenek seviyesi, toplam parası, toplam expsi, oyuncu öldürme sayısı, ölme sayısı, kullanılabilir claim block miktarı, kaç parça claim sahibi olduğu toplam zıplaması, kaç eşya ürettiği, kaç adet balık tuttuğu, kaç block kırdığı, oyundan kaç kere çıktığını gösterir
+  - title: "EXP Şişeleme"
+    content: |
+      Üstünüzde bulunan expleri /expşişele komutu ile şişeleyebilirsiniz Exp şişelediğiniz zaman expnizin %10 nu komisyon olarak alır
+  - title: "Metin taşı"
+    content: |
+      Metin taşları 60 dakikada bir yenilenir. Metin taşlarını kırarak değerli ganimetler alınabilir. /warp metin
+  - title: "Mağaracoin"
+    content: |
+     "Mağaracoin “/warp mağara” içerisinde kasılır ve “/warp madencoin” içerisinde harcanır."
+  - title: "Envoy Mesajları"
+    content: |
+     "Envoy mesajlarını kapatmak için “/envoy ignore” komutunu kullanmalısın."
+  - title: "AFK Hesap Limiti"
+    content: |
+     "Afkclient üzerinde tek IP adresi üzerinden 10 farklı hesap kullanabilirsin."
+  - title: "Kanat Parçacığı"
+    content: |
+     "Kanat parçacığı “/warp envoy” alanındaki kasalardan şans eseri çıkar. Topladığın parçacıklarla kanat alabilirsin. Gereken miktarı görmek ve işlem yapmak için “/warp kanat” komutunu kullanmalısın."
+  - title: "İşçi Sistemi"
+    content: |
+      "İşçi sistemi, adanıza eklediğiniz oyuncuların farmlarınıza zarar vermesini veya eşyalarınızı çalmasını engellemek için tasarlanmıştır. Temel komutlar şunlardır:
+      ' /işçi yap isim (Belirttiğiniz oyuncuyu işçi ekler)
+      ' /işçi depo (İşçiye vereceğiniz blokların çalınmamasını sağlar)
+      ' /işçi panel (İşçi eklediğiniz oyuncunun yetkilerini yönettiğiniz paneldir)
+      ' /işçi ayrıl (İşten çıkmak için kullanılır)
+      ' /işçi kov (İşçiyi işten çıkarmak için kullanılır)
+      ' /işçi liste (İşe aldığınız kişilerin listesini gösterir)"
+  - title: "Ruh Tozu"
+    content: |
+     "Ruh tozu, Nether adanızdaki yetişmiş Nether yumrularını toplarken şansa bağlı olarak düşer. Topladığınız ruh tozlarını '/wart' komutunu kullanarak veya Nether adanızdayken kazmanıza sağ tıklayıp açılan menü üzerinden harcayabilirsiniz."
+
+  - title:  "Mağara Nedir"
+    content: |
+     "Mağara rütbe görevlerini tamamlayabileceğiniz veya cevher kırıp maden kasabileceğiniz mekandır. Gitmek için /warp mağara yazmalısınız. Unutmayın mağara tek katlı değil birden çok katlıdır."
+
+  - title: "Süngeri nerede kıracağım"
+    content: |
+      'Süngeri ‘/warp maden’ bölgesine giderek belirli alan içerisinde kırabilir ve bu süngerlerden para kazanabilirsin. -  title: "Süngeri nerede kullanacağım"
+  -   title: "Süngeri nerede kullanacağım"
+      content: |
+      '‘/warp sünger’ yazıp oradaki köylüden belirli bir miktar sünger karşılığında takas yapabilirsiniz.'
