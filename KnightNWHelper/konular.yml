@@ -396,7 +396,8 @@ konular:
     aktif: true
     guclu: [ölünce, öldüğüm, ölürsem, ölürse, eşyalar gid, eşyam gid, eşyalar düş]
     zayif: [ölüm, ölünce ne]
-    yasak: []
+    # Ölüm noktasına dönme soruları geri-donme konusuna ait.
+    yasak: [öldüğüm yere, ölüm noktası, back]
     cevap:
       - "&fÖlünce eşyaların yere düşer. &eEnvanter koruma &fhakkın varsa korunur."
       - "&7Ender sandıktakiler her zaman güvende."
@@ -811,3 +812,14 @@ konular:
       - "&e/kelleavcisi koy <oyuncu> <miktar> &file bir oyuncunun kellesine ödül koyarsın."
       - "&7O oyuncuyu öldüren ödülü kazanır."
 
+  geri-donme:
+    aktif: true
+    # DİKKAT: Türkçe karakterler sadeleşince "öldüğüm" ile "olduğum" aynı
+    # yazılıyor. "olduğum yerde" sohbetine karışmasın diye kalıplar
+    # yön bildiren sözlerle birlikte yazıldı.
+    guclu: [öldüğüm yere nasıl, nasıl öldüğüm yere, öldüğüm yere git, öldüğüm yere dön, öldüğüm yere ışın, ölüm noktası, back nasıl, back komut, back nedir]
+    zayif: [back]
+    yasak: []
+    cevap:
+      - "&e/back &fyazarak öldüğün yere geri dönersin."
+      - "&7Eşyaların hâlâ oradaysa hızlı ol, başkası da alabilir."

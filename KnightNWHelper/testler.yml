@@ -391,3 +391,14 @@ testler:
   - mesaj: "acemi korumam bitti kim beni kesmek ister"
     beklenen: yok
 
+  # ---------- ÖLDÜĞÜ YERE DÖNME (/back) ----------
+  - mesaj: "nasıl öldüğüm yere giderim"
+    beklenen: geri-donme
+  - mesaj: "öldüğüm yere nasıl ışınlanabilirim"
+    beklenen: geri-donme
+  - mesaj: "back komutu nedir"
+    beklenen: geri-donme
+  - mesaj: "ölünce eşyalarım düşer mi"
+    beklenen: olunce-esya
+  - mesaj: "olduğum yerde iki spawner var değerli mi"
+    beklenen: yok

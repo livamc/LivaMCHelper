@@ -60,7 +60,7 @@ entries:
     content: "/yaris = O anki saatlik yarış görevini gösterir | /gunlukgorev = Günlük görevlerini gösterir | /jackpot = Jackpot menüsünü açar | /afkbilgi = AFK istatistiklerini gösterir | /kelleavcisi koy <oyuncu> <miktar> = Bir oyuncunun kellesine ödül koyar"
 
   - title: "Komutlar - Sohbet ve Ayarlar"
-    content: "/msg <oyuncu> <mesaj> = Özel mesaj gönderir | /r <mesaj> = Son mesaja cevap verir | /ignore <oyuncu> = Oyuncuyu engeller | /msgtoggle = Özel mesaj almayı açar/kapatır | /etiket = Etiket menüsünü açar | /sure = Toplam oynama süreni gösterir | /surebak <oyuncu> = Başka oyuncunun süresini gösterir | /afk = AFK moduna geçer | /ping = Gecikmeni ölçer | /nv veya /gecegorus = Gece görüşünü açar | /acemikoruma kapat = Acemi korumayı erkenden kaldırır | /seviye = Seviye bilgisini gösterir | /2fa = Hesabına çift aşamalı doğrulama ekler | /report = Oyuncu şikayet eder | /discordödül = Discord eşleme günlük ödülünü alır | /vp claim = Siteden alınan paket gelmediyse teslim alır"
+    content: "/msg <oyuncu> <mesaj> = Özel mesaj gönderir | /r <mesaj> = Son mesaja cevap verir | /ignore <oyuncu> = Oyuncuyu engeller | /msgtoggle = Özel mesaj almayı açar/kapatır | /etiket = Etiket menüsünü açar | /sure = Toplam oynama süreni gösterir | /surebak <oyuncu> = Başka oyuncunun süresini gösterir | /afk = AFK moduna geçer | /ping = Gecikmeni ölçer | /back = Öldüğün yere geri döner | /nv veya /gecegorus = Gece görüşünü açar | /acemikoruma kapat = Acemi korumayı erkenden kaldırır | /seviye = Seviye bilgisini gösterir | /2fa = Hesabına çift aşamalı doğrulama ekler | /report = Oyuncu şikayet eder | /discordödül = Discord eşleme günlük ödülünü alır | /vp claim = Siteden alınan paket gelmediyse teslim alır"
 
   - title: "Komutlar - Bilgi"
     content: "/bilgi = Rehberi açar | /baslangic = Yeni oyuncu rehberini açar | /kurallar = Kural ekranını açar | /komutlar = Komut listesini açar | /sezon = Sezon sıralamalarını ve ödüllerini gösterir | /siralama = Sezon sıralamalarını gösterir | /profil = Oyuncu profilini ve istatistiklerini açar | /vip = Rütbe menüsünü açar | /kit = Kit menüsünü açar | /sor <soru> = Yapay zeka yardımcıya soru sorar (bu komut!) | /vote = Oy verme sitelerinin linklerini verir | /discord = Discord sunucusunun linkini verir | /site = Web sitesinin linkini verir | /hesapeşle = Discord hesabını oyun hesabıyla eşler | /envanterkoruma = Envanter koruma panelini açar, kalan hakkını gösterir ve korumayı açıp kapatır"
@@ -376,6 +376,9 @@ entries:
 
   - title: "SSS: Yetkililer kim, sunucunun sahibi kim?"
     content: "Yetkili isimleri bu bilgi tabanında yoktur. Yetkililere ve yönetime Discord sunucusundan (discord.gg/livamc) ulaşabilirsin."
+
+  - title: "SSS: Öldüğüm yere nasıl dönerim, /back var mı?"
+    content: "Evet. /back yazarak öldüğün yere geri dönersin. Eşyaların yere düştüyse hızlı ol; claim olmadığı için başka oyuncular da alabilir."
 
   # ── CEVAP TARZI ───────────────────────────────────────────
   - title: "Cevap Tarzı"
