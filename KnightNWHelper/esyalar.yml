@@ -1,0 +1,270 @@
+# ============================================================
+#   TARİF MOTORU - Eşya Sözlüğü
+#
+#   Oyuncu "çubuk nasıl yapılır" yazdığında bot cevap verir.
+#
+#   TARİFLER BU DOSYADA YAZMIYOR. Tarifler sunucunun kendi
+#   kayıtlarından okunuyor (Bukkit.getRecipesFor), yani oyundaki
+#   BÜTÜN tarifler otomatik olarak çalışıyor — vanilla, veri
+#   paketi, başka eklentilerin eklediği tarifler dahil. Minecraft
+#   güncellenince tarifler de kendiliğinden güncelleniyor.
+#
+#   Bu dosyanın tek işi TÜRKÇE AD EŞLEŞTİRMEK. Sunucu tarafında
+#   eşyaların Türkçe adı yoktur; oyuncunun gördüğü "Çubuk" yazısı
+#   istemcinin kendi dil dosyasından gelir, sunucu sadece STICK
+#   bilir. Aşağıdaki liste o köprüyü kuruyor.
+#
+#   Listede olmayan eşya için bot susmaz: İngilizce adıyla da
+#   eşleştirmeyi dener ("grindstone nasıl yapılır" çalışır).
+#
+#   Yeni ad eklemek: solda oyuncunun yazacağı Türkçe ad, sağda
+#   Minecraft materyal adı. Türkçe karakter kullanabilirsin.
+#   Değişiklikten sonra: /sohbetyardim reload
+# ============================================================
+
+ayarlar:
+  acik: true
+
+  # Cevapta en fazla kaç satır yazılsın (ızgara + açıklamalar dahil)
+  en-fazla-satir: 10
+
+  # Bu kalıplardan biri geçmezse eşya adı aranmaz bile.
+  # Türkçe karakter yazabilirsin, eklenti kendi sadeleştirir.
+  kaliplar:
+    - "nasıl yapılır"
+    - "nasıl yapılıyor"
+    - "nasıl yapabilirim"
+    - "nasıl yaparım"
+    - "nasıl yapıcam"
+    - "nasıl yapılıyo"
+    - "nası yapılır"
+    - "nası yapabilirim"
+    - "nası yapılıyor"
+    - "nasıl üretilir"
+    - "nasıl craftlanır"
+    - "nasıl craft"
+    - "craftı nedir"
+    - "tarifi nedir"
+    - "tarifi ne"
+    - "neyle yapılır"
+    - "neyden yapılır"
+    - "ne ile yapılır"
+
+# ============================================================
+#   EŞYA ADLARI
+# ============================================================
+
+esyalar:
+
+  # ---------------- Temel ----------------
+  çubuk: STICK
+  sopa: STICK
+  tahta: OAK_PLANKS
+  kalas: OAK_PLANKS
+  tahta kalası: OAK_PLANKS
+  meşale: TORCH
+  kömür: COAL
+  kömür bloğu: COAL_BLOCK
+  ip: STRING
+  kitap: BOOK
+  kitaplık: BOOKSHELF
+  kağıt: PAPER
+  tuğla: BRICK
+  taş tuğla: STONE_BRICKS
+  cam: GLASS
+  cam levha: GLASS_PANE
+  yün: WHITE_WOOL
+  halı: WHITE_CARPET
+  merdiven: LADDER
+  basamak: OAK_STAIRS
+  levha: OAK_SLAB
+  çit: OAK_FENCE
+  çit kapısı: OAK_FENCE_GATE
+  kapı: OAK_DOOR
+  kapak: OAK_TRAPDOOR
+  tabela: OAK_SIGN
+  yatak: RED_BED
+  fener: LANTERN
+  kandil: SOUL_LANTERN
+  duvar meşalesi: WALL_TORCH
+
+  # ---------------- İş istasyonları ----------------
+  iş tezgahı: CRAFTING_TABLE
+  çalışma masası: CRAFTING_TABLE
+  fırın: FURNACE
+  eritme ocağı: BLAST_FURNACE
+  tütsüleyici: SMOKER
+  sandık: CHEST
+  tuzak sandık: TRAPPED_CHEST
+  ender sandık: ENDER_CHEST
+  namlu: BARREL
+  varil: BARREL
+  shulker kutusu: SHULKER_BOX
+  örs: ANVIL
+  büyü masası: ENCHANTING_TABLE
+  kaynatma standı: BREWING_STAND
+  bileme taşı: GRINDSTONE
+  dokuma tezgahı: LOOM
+  kartografi masası: CARTOGRAPHY_TABLE
+  ok yapım masası: FLETCHING_TABLE
+  demirci masası: SMITHING_TABLE
+  taş kesici: STONECUTTER
+  bal peteği: BEEHIVE
+  arı kovanı: BEEHIVE
+  kazan: CAULDRON
+  komposter: COMPOSTER
+  çan: BELL
+  hedef: TARGET
+  yazı kürsüsü: LECTERN
+
+  # ---------------- Aletler ----------------
+  kazma: IRON_PICKAXE
+  tahta kazma: WOODEN_PICKAXE
+  taş kazma: STONE_PICKAXE
+  demir kazma: IRON_PICKAXE
+  altın kazma: GOLDEN_PICKAXE
+  elmas kazma: DIAMOND_PICKAXE
+  netherite kazma: NETHERITE_PICKAXE
+  kürek: IRON_SHOVEL
+  elmas kürek: DIAMOND_SHOVEL
+  balta: IRON_AXE
+  elmas balta: DIAMOND_AXE
+  netherite balta: NETHERITE_AXE
+  çapa: IRON_HOE
+  makas: SHEARS
+  çakmak: FLINT_AND_STEEL
+  kova: BUCKET
+  su kovası: WATER_BUCKET
+  olta: FISHING_ROD
+  pusula: COMPASS
+  saat: CLOCK
+  harita: MAP
+  dürbün: SPYGLASS
+  fırça: BRUSH
+
+  # ---------------- Savaş ----------------
+  kılıç: IRON_SWORD
+  elmas kılıç: DIAMOND_SWORD
+  netherite kılıç: NETHERITE_SWORD
+  yay: BOW
+  arbalet: CROSSBOW
+  ok: ARROW
+  kalkan: SHIELD
+  tnt: TNT
+
+  # ---------------- Zırh ----------------
+  kask: IRON_HELMET
+  miğfer: IRON_HELMET
+  göğüslük: IRON_CHESTPLATE
+  zırh: IRON_CHESTPLATE
+  pantolon: IRON_LEGGINGS
+  bot: IRON_BOOTS
+  ayakkabı: IRON_BOOTS
+  elmas kask: DIAMOND_HELMET
+  elmas göğüslük: DIAMOND_CHESTPLATE
+  elmas pantolon: DIAMOND_LEGGINGS
+  elmas bot: DIAMOND_BOOTS
+  netherite göğüslük: NETHERITE_CHESTPLATE
+  deri zırh: LEATHER_CHESTPLATE
+
+  # ---------------- Redstone ----------------
+  redstone: REDSTONE
+  redstone bloğu: REDSTONE_BLOCK
+  redstone meşalesi: REDSTONE_TORCH
+  piston: PISTON
+  yapışkan piston: STICKY_PISTON
+  fırlatıcı: DISPENSER
+  dağıtıcı: DROPPER
+  gözlemci: OBSERVER
+  tekrarlayıcı: REPEATER
+  karşılaştırıcı: COMPARATOR
+  huni: HOPPER
+  basınç plakası: STONE_PRESSURE_PLATE
+  düğme: STONE_BUTTON
+  kaldıraç: LEVER
+  kanca: TRIPWIRE_HOOK
+  ray: RAIL
+  güçlendirilmiş ray: POWERED_RAIL
+  algılayıcı ray: DETECTOR_RAIL
+  aktivatör ray: ACTIVATOR_RAIL
+  vagon: MINECART
+  sandıklı vagon: CHEST_MINECART
+  huni vagon: HOPPER_MINECART
+  tekne: OAK_BOAT
+  müzik kutusu: JUKEBOX
+  nota bloğu: NOTE_BLOCK
+  günışığı sensörü: DAYLIGHT_DETECTOR
+
+  # ---------------- Yemek ----------------
+  ekmek: BREAD
+  kek: CAKE
+  pasta: CAKE
+  kurabiye: COOKIE
+  turta: PUMPKIN_PIE
+  balkabağı turtası: PUMPKIN_PIE
+  altın elma: GOLDEN_APPLE
+  altın havuç: GOLDEN_CARROT
+  pancar çorbası: BEETROOT_SOUP
+  mantar çorbası: MUSHROOM_STEW
+  şeker: SUGAR
+  biftek: COOKED_BEEF
+  pişmiş tavuk: COOKED_CHICKEN
+  pişmiş domuz: COOKED_PORKCHOP
+
+  # ---------------- İksir ----------------
+  su şişesi: GLASS_BOTTLE
+  şişe: GLASS_BOTTLE
+  iksir: POTION
+  ateşleyici toz: BLAZE_POWDER
+  fermente örümcek gözü: FERMENTED_SPIDER_EYE
+  parlayan taş tozu: GLOWSTONE_DUST
+  barut: GUNPOWDER
+
+  # ---------------- Maden ve blok ----------------
+  demir: IRON_INGOT
+  demir külçesi: IRON_INGOT
+  demir bloğu: IRON_BLOCK
+  altın: GOLD_INGOT
+  altın külçesi: GOLD_INGOT
+  altın bloğu: GOLD_BLOCK
+  elmas: DIAMOND
+  elmas bloğu: DIAMOND_BLOCK
+  zümrüt: EMERALD
+  zümrüt bloğu: EMERALD_BLOCK
+  lapis: LAPIS_LAZULI
+  lapis bloğu: LAPIS_BLOCK
+  ametist: AMETHYST_SHARD
+  netherite: NETHERITE_INGOT
+  netherite külçesi: NETHERITE_INGOT
+  netherite bloğu: NETHERITE_BLOCK
+  antik kalıntı: ANCIENT_DEBRIS
+  bakır: COPPER_INGOT
+  bakır bloğu: COPPER_BLOCK
+  çakmaktaşı: FLINT
+  kil: CLAY
+  obsidyen: OBSIDIAN
+
+  # ---------------- End ve Nether ----------------
+  ender gözü: ENDER_EYE
+  ender incisi: ENDER_PEARL
+  deniz feneri: BEACON
+  conduit: CONDUIT
+  nether tuğlası: NETHER_BRICKS
+  parlayan taş: GLOWSTONE
+  magma bloğu: MAGMA_BLOCK
+
+  # ---------------- Dekorasyon ----------------
+  çiçek saksısı: FLOWER_POT
+  eşya çerçevesi: ITEM_FRAME
+  boya: PAINTING
+  tablo: PAINTING
+  zırh standı: ARMOR_STAND
+  kafatası: SKELETON_SKULL
+  paratoner: LIGHTNING_ROD
+  iskele: SCAFFOLDING
+  zincir: CHAIN
+  demir parmaklık: IRON_BARS
+  beton: WHITE_CONCRETE_POWDER
+  cilalı taş: SMOOTH_STONE
+  taş: STONE
+  kaldırım taşı: COBBLESTONE
