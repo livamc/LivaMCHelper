@@ -362,3 +362,20 @@ testler:
     beklenen: kristal-gonderme
   - mesaj: "kristal nasıl kazanılır"
     beklenen: kristal
+
+  # ---------- GECE GÖRÜŞÜ VE KELLE AVCISI ----------
+  - mesaj: "gece görüşü nasıl açılıyo"
+    beklenen: gece-gorusu
+  - mesaj: "gece görüş komutu neydi"
+    beklenen: gece-gorusu
+  - mesaj: "sınırsız gece gorusu kodu neydı"
+    beklenen: gece-gorusu
+  - mesaj: "gece görüşü iksiri nasıl yapılır"
+    beklenen: iksir
+  - mesaj: "kelleye ödül koyma komutu neydi"
+    beklenen: kelle-avcisi
+  - mesaj: "nasıl bı oyuncunun kellesine para koyyoz"
+    beklenen: kelle-avcisi
+  - mesaj: "kim kelle koydu bana"
+    beklenen: yok
+

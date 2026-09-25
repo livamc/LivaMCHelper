@@ -786,3 +786,23 @@ konular:
     cevap:
       - "&cKristal başka bir oyuncuya gönderilemez&f, herkes kendi kristalini kazanır."
       - "&7AFK alanında durarak kazanılır: &e/ewarp afk"
+
+  gece-gorusu:
+    aktif: true
+    guclu: [gece görüş, gecegorus, night vision, nightvision, "=nv"]
+    zayif: []
+    # "gece görüşü iksiri nasıl yapılır" iksir konusuna ait.
+    yasak: [iksir, potion]
+    cevap:
+      - "&e/nv &fveya &e/gecegorus &fyazarak gece görüşünü açarsın."
+
+  kelle-avcisi:
+    aktif: true
+    guclu: [kelle, bounty, ödül koy]
+    zayif: []
+    # "kim kelle koydu bana" oyuncuya soruluyor.
+    yasak: ["=kim"]
+    cevap:
+      - "&e/kelleavcisi koy <oyuncu> <miktar> &file bir oyuncunun kellesine ödül koyarsın."
+      - "&7O oyuncuyu öldüren ödülü kazanır."
+
