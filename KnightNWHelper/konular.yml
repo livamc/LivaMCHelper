@@ -208,11 +208,11 @@ konular:
 
   esya-satma:
     aktif: true
-    guclu: [nasıl sat, nerede sat, nerde sat, nereden sat, nereye sat, satış nasıl]
+    guclu: [nasıl sat, nerede sat, nerde sat, nereden sat, nereye sat, satış nasıl, eşya sat, item sat]
     zayif: [sell, sat, satmak, satıyorum]
     # 'spawner/anahtar/kristal' yasak: "spawner nerede satılıyor"
     # bir SATMA sorusu değil, nereden ALINIR sorusudur.
-    yasak: [ah sell, açık artırma, market, sipariş, spawner, anahtar, kristal]
+    yasak: [ah sell, açık artırma, market, sipariş, spawner, anahtar, kristal, "*satiyon"]
     cevap:
       - "&fEnvanterindekini &e/sell &file sunucuya satarsın."
       - "&7Oyunculara satmak için &e/ah sell <fiyat>&7 — komisyon yok."
@@ -749,42 +749,40 @@ konular:
       - "&fAntik kalıntı &eNether'de&f, Y=8 ile 22 arasında bulunur (en çok Y=15). Elmas kazma ister."
       - "&7Fırında 1 kalıntı = 1 hurda. 4 hurda + 4 altın = 1 netherite külçesi. &e/rtpnether"
 
-  # ---------- BİLGİ BEKLEYENLER ----------
-  # Aşağıdaki konuların kelimeleri hazır ama cevapları sunucu
-  # sahibinden teyit bekliyor. Cevap yazılınca 'aktif: true' yap.
-
   event-kasasi:
-    aktif: false
+    aktif: true
     guclu: [event kasa, evenet kasa, etkinlik kasa, event anahtar, etkinlik anahtar]
     zayif: [event]
     yasak: []
     cevap:
-      - "&fEvent kasası: [CEVAP BEKLENİYOR - anahtar nereden alınır?]"
-      - "&7Kasalar &eWarp → Kasa &7alanında, anahtarı uygun kasaya sağ tıkla."
+      - "&fEvent kasası anahtarı &esaatte 1 kez &fdağıtılır. Ne zaman geleceği sağdaki tablodaki sayaçta yazar."
+      - "&7Açmak için &eWarp → Kasa &7alanına git, anahtarla kasaya sağ tıkla."
 
   acemi-koruma:
-    aktif: false
-    guclu: [acemi koruma, acemikoruma, acemi korumas, acemi korumam, yeni oyuncu koruma]
+    aktif: true
+    guclu: [acemi koruma, acemikoruma, yeni oyuncu koruma]
     zayif: [acemi]
-    yasak: []
+    # "acemi koruman mı var", "kim beni kesmek ister" oyuncuya soruluyor.
+    yasak: ["=kim", "=koruman"]
     cevap:
-      - "&fAcemi koruma: [CEVAP BEKLENİYOR - ne kadar sürer, nasıl kapatılır?]"
-      - "&7[CEVAP BEKLENİYOR]"
+      - "&fAcemi koruma yeni oyunculara &e1 saat &fverilir, süre dolunca kendiliğinden kalkar."
+      - "&7Erken kaldırmak istersen: &e/acemikoruma kapat"
 
   lobi:
-    aktif: false
+    # Sunucuda ayrı bir lobi yok; oyuncuların "lobi" dediği yer spawn.
+    aktif: true
     guclu: [lobi, lobby]
     zayif: [hub]
-    yasak: []
+    yasak: ["=kim"]
     cevap:
-      - "&fLobiye dönmek için: [CEVAP BEKLENİYOR - komut nedir?]"
-      - "&7[CEVAP BEKLENİYOR]"
+      - "&fAyrı bir lobi yok, ana meydan &espawn&f'dır: &e/spawn &fyazman yeterli."
+      - "&7Üssüne geri dönmek için önce orada &e/sethome &7yap, sonra &e/ev &7ile dönersin."
 
   kristal-gonderme:
-    aktif: false
+    aktif: true
     guclu: [kristal gönder, kristal at, kristal yolla, kristal transfer]
     zayif: []
     yasak: []
     cevap:
-      - "&fKristal gönderme: [CEVAP BEKLENİYOR - gönderilebiliyor mu, komutu ne?]"
-      - "&7[CEVAP BEKLENİYOR]"
+      - "&cKristal başka bir oyuncuya gönderilemez&f, herkes kendi kristalini kazanır."
+      - "&7AFK alanında durarak kazanılır: &e/ewarp afk"

@@ -336,3 +336,29 @@ testler:
     beklenen: yok
   - mesaj: "netherite kazma kaç tane var sende"
     beklenen: yok
+
+  # ---------- EVENT KASASI, ACEMİ KORUMA, LOBİ, KRİSTAL ----------
+  - mesaj: "event kasası nasıl açılıyor"
+    beklenen: event-kasasi
+  - mesaj: "event anahtarı nasıl kullanılıyo"
+    beklenen: event-kasasi
+  - mesaj: "kasa anahtarı nereden alınır"
+    beklenen: kasa
+  - mesaj: "acemi koruması nasıl kapatılıyo"
+    beklenen: acemi-koruma
+  - mesaj: "acemikoruma nasıl kapatiliyo"
+    beklenen: acemi-koruma
+  - mesaj: "ben biraz acemiyim nasıl eşya satabilirim"
+    beklenen: esya-satma
+  - mesaj: "lobiye nasıl gidilir"
+    beklenen: lobi
+  - mesaj: "rehber lobiye dönme komutu nedir?"
+    beklenen: lobi
+  - mesaj: "lobiye nasıl tp lencem"
+    beklenen: lobi
+  - mesaj: "arkadaşıma nasıl kristal gönderirim"
+    beklenen: kristal-gonderme
+  - mesaj: "nasıl birine kristal atabiliriz"
+    beklenen: kristal-gonderme
+  - mesaj: "kristal nasıl kazanılır"
+    beklenen: kristal
