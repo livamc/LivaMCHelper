@@ -1,0 +1,229 @@
+# ============================================================
+#   SOHBET YARDIMCISI - TEST DEFTERİ
+#
+#   Çalıştırmak için:  /sohbetyardim testler
+#
+#   BU DOSYA NEDEN VAR
+#
+#   Kelime listesine yapılan HER değişiklik 56 konunun tamamını
+#   etkiliyor. Bir hatayı düzeltirken başka bir yerde yenisini
+#   açmak bu sistemin en sık görülen davranışıydı ve kimse her
+#   değişiklikten sonra 56 konuyu elle deneyemezdi.
+#
+#   Burada "şu cümle yazılırsa şu konu cevap vermeli" (ya da
+#   "hiçbir konu cevap vermemeli") diye yazılmış örnekler duruyor.
+#   Tek komutla hepsi çalışıyor.
+#
+#   KURAL: her düzeltilen hata için buraya bir satır eklenir.
+#   Böylece aynı hata bir daha geri gelemez.
+#
+#   beklenen: yok   -> botun SUSMASI gerekir
+#   beklenen: <id>  -> o konunun cevap vermesi gerekir
+#
+#   NOT: "oyuncuya hitap" süzgeci burada denenmez, çünkü o an
+#   kimin çevrimiçi olduğuna bağlı ve test sonucu değişken olurdu.
+#   Onu /sohbetyardim dene ile canlı sunucuda kontrol et.
+# ============================================================
+
+testler:
+
+  # ---------- GERÇEK HATALAR ----------
+  # Aşağıdaki üç satır sunucuda YAŞANMIŞ yanlış cevaplardır.
+  # Silinmemeli.
+
+  # 'kaplama' skin konusundaydı ve tek kelime cevap vermeye
+  # yetiyordu. Oyuncu zırh kaplamasından bahsediyordu.
+  - mesaj: "overland setim nasıl kaplama yaptım"
+    beklenen: yok
+
+  # 'çekiliş' discord konusunun kelimesiydi, alakasız cevap geldi.
+  - mesaj: "çekiliş ne zaman yapılacak"
+    beklenen: yok
+
+  # Bilgi tabanında cevabı olduğu halde 'kasma' kelimesi hiçbir
+  # konuda geçmediği için cevapsız kalmıştı.
+  - mesaj: "bu sunucuda para kasma yöntemi nedir"
+    beklenen: para-kazanma
+
+  # ---------- EKONOMİ ----------
+
+  - mesaj: "para nasıl kazanılır"
+    beklenen: para-kazanma
+  - mesaj: "nasıl zengin olunur bu sunucuda"
+    beklenen: para-kazanma
+  - mesaj: "para nasıl yollanır"
+    beklenen: para-gonderme
+  - mesaj: "maaş ne zaman yatıyor"
+    beklenen: maas-hazine
+  - mesaj: "vergi neden kesiliyor"
+    beklenen: vergi
+  - mesaj: "eşyalarımı nerede satarım"
+    beklenen: esya-satma
+  - mesaj: "ah nasıl kullanılır"
+    beklenen: acik-artirma
+  - mesaj: "market nerede acaba"
+    beklenen: market
+  - mesaj: "sipariş nasıl verilir"
+    beklenen: siparis
+  - mesaj: "pazaryeri nasıl kiralanır"
+    beklenen: pazaryeri
+  - mesaj: "kristal nasıl kazanılır"
+    beklenen: kristal
+  - mesaj: "jackpot nasıl oynanır"
+    beklenen: jackpot
+  - mesaj: "satış çarpanı nasıl artar"
+    beklenen: satis-carpani
+  - mesaj: "en zengin kim baltop nerede"
+    beklenen: siralama
+
+  # ---------- OYNANIŞ ----------
+
+  - mesaj: "rtp bekleme süresi ne kadar"
+    beklenen: rtp
+  - mesaj: "ormana nasıl gidilir"
+    beklenen: orman-gitme
+  - mesaj: "nethere nasıl giderim"
+    beklenen: nether-gitme
+  - mesaj: "ende nasıl gidilir"
+    beklenen: end-gitme
+  - mesaj: "spawn nasıl gidilir"
+    beklenen: spawn-warp
+  - mesaj: "spawner nerede satılıyor"
+    beklenen: spawner
+  - mesaj: "takas nasıl yapılır"
+    beklenen: takas
+  - mesaj: "kasa anahtarı nereden alınır"
+    beklenen: kasa
+  - mesaj: "ametist eşyalar neden yok oluyor"
+    beklenen: ametist
+  - mesaj: "burada claim var mı"
+    beklenen: claim-koruma
+  - mesaj: "ölünce eşyalarım düşer mi"
+    beklenen: olunce-esya
+  - mesaj: "envanter koruma nasıl alınır"
+    beklenen: envanter-koruma
+  - mesaj: "savaş etiketi ne kadar sürüyor"
+    beklenen: savas-etiketi
+  - mesaj: "ev hakkım kaç tane"
+    beklenen: ev-home
+  - mesaj: "takım nasıl kurulur"
+    beklenen: takim
+  - mesaj: "yanına nasıl ışınlanırım"
+    beklenen: isinlanma-istegi
+
+  # ---------- İLERLEME VE SUNUCU ----------
+
+  - mesaj: "seviye nasıl yükseliyor"
+    beklenen: seviye
+  - mesaj: "günlük görev nerede"
+    beklenen: gunluk-gorev
+  - mesaj: "yarış ne zaman başlıyor"
+    beklenen: yaris
+  - mesaj: "uçan ada ne zaman geliyor"
+    beklenen: gokyuzu-etkinlik
+  - mesaj: "rütbe nereden alınıyor"
+    beklenen: vip-rutbe
+  - mesaj: "kit nasıl alınır"
+    beklenen: kit
+  - mesaj: "discord linki nedir"
+    beklenen: discord
+  - mesaj: "hesabımı discorda nasıl bağlarım"
+    beklenen: hesap-esleme
+  - mesaj: "oy nasıl verilir"
+    beklenen: oy-verme
+  - mesaj: "skinim görünmüyor neden"
+    beklenen: skin
+  - mesaj: "sunucunun ipi nedir"
+    beklenen: sunucu-bilgi
+  - mesaj: "kurallar nerede yazıyor"
+    beklenen: kurallar
+  - mesaj: "hileci var nasıl şikayet ederim"
+    beklenen: sikayet
+  - mesaj: "2fa nasıl açılır"
+    beklenen: guvenlik-2fa
+  - mesaj: "paketim gelmedi ne yapmalıyım"
+    beklenen: site-paket
+  - mesaj: "menü komutu nedir"
+    beklenen: menu
+
+  # ---------- YENİ OYUNCU ----------
+
+  - mesaj: "knk yeni başladım napıcam"
+    beklenen: oyuna-baslama
+  - mesaj: "nereden başlamalıyım bilmiyorum"
+    beklenen: oyuna-baslama
+  - mesaj: "en iyi farm hangisi"
+    beklenen: en-iyi-farm
+  - mesaj: "şu an kaç kişi var"
+    beklenen: oyuncu-sayisi
+
+  # ---------- EŞYA VE HESAP ----------
+
+  - mesaj: "ender sandık çalınır mı"
+    beklenen: ender-sandik
+  - mesaj: "büyü masası nasıl yapılır"
+    beklenen: buyu-masasi
+  - mesaj: "iksir nasıl yapılıyor"
+    beklenen: iksir
+  - mesaj: "kaç saat oynadım ben"
+    beklenen: oynama-suresi
+  - mesaj: "etiket nasıl değiştirilir"
+    beklenen: etiket-renk
+  - mesaj: "nasıl uçabiliyorsunuz"
+    beklenen: ucma-fly
+  - mesaj: "ban yedim ne yapmalıyım"
+    beklenen: ceza-itiraz
+
+  # ---------- SUSMASI GEREKENLER ----------
+  #
+  # Bu bölüm en değerlisi. Botun konuşmaması gereken durumlar:
+  # ticaret, günlük sohbet, ifade cümleleri, çakışan kelimeler.
+
+  - mesaj: "kazma satar mısın kaça veriyorsun"
+    beklenen: yok
+  - mesaj: "elmas alan var mı ucuza veriyorum"
+    beklenen: yok
+  - mesaj: "netherite kaplama nasıl yapılır"
+    beklenen: yok
+  - mesaj: "merhaba arkadaşlar nasılsınız"
+    beklenen: yok
+  - mesaj: "bugün hava çok güzeldi"
+    beklenen: yok
+  - mesaj: "az önce çok para kazandım"
+    beklenen: yok
+  - mesaj: "ben spawnda bekliyorum gel"
+    beklenen: yok
+  - mesaj: "dün akşam yarışı kazandım"
+    beklenen: yok
+
+  # ---------- İKİNCİ TUR: gerçek sohbetten kalıplar ----------
+  # Aşağıdakiler ilk turdan sonra eklendi; birkaçı o an başarısızdı
+  # ve konu listesindeki eksiği gösterdi.
+
+  - mesaj: "spawn nerede acaba"
+    beklenen: spawn-warp
+  - mesaj: "vip nasıl alınır"
+    beklenen: vip-rutbe
+  - mesaj: "spawner nasıl alınır"
+    beklenen: spawner
+  - mesaj: "ev nasıl kurulur"
+    beklenen: ev-home
+  - mesaj: "seviye nasıl atlanır"
+    beklenen: seviye
+  - mesaj: "kasa anahtarı kaç para"
+    beklenen: yok
+  - mesaj: "rtp attım sürekli ölüyorum"
+    beklenen: yok
+  - mesaj: "elmas kazma satıyorum alan var mı"
+    beklenen: yok
+  - mesaj: "envanterim doldu ne yapayım"
+    beklenen: yok
+  - mesaj: "yarışı kim kazandı acaba"
+    beklenen: yaris
+
+  # Alderakis sohbette sordu, bot cevaplayamadı: 'kasa' yalnızca
+  # zayıf kelimeydi ve tek başına yetmiyordu.
+  - mesaj: "nasıl kasa açarım"
+    beklenen: kasa
+  - mesaj: "kasalar nerede acaba"
+    beklenen: kasa

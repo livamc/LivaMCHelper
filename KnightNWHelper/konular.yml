@@ -1,0 +1,658 @@
+# ============================================================
+#   SOHBET YARDIMCISI - KONULAR
+#
+#   Bu dosya config.yml'den AYRI tutuluyor. Sebebi pratik:
+#   config.yml Gemini API anahtarını ve Discord token'ını
+#   tutuyor, o dosyanın üstüne yazmak istemiyoruz. Konu listesi
+#   burada serbestçe güncellenebilir.
+#
+#   Değişiklikten sonra:  /sohbetyardim reload
+#   Kontrol etmek için:   /sohbetyardim testler
+# ============================================================
+
+
+# ------------------------------------------------------------
+#   PUANLAMA
+#
+#   Bir mesajın cevaplanması için sırayla şu süzgeçlerden
+#   geçmesi gerekir. Herhangi biri kapalıysa bot SUSAR:
+#
+#     1. yasak kelime      konu tamamen elenir
+#     2. yeterli sinyal    en az 1 GÜÇLÜ ya da en az 2 ZAYIF kelime
+#     3. asgari puan       toplam puan eşiğin altındaysa susar
+#     4. fark kuralı       kazanan ikinciyi belirgin geçmeli
+#     5. soru şartı        mesaj soru olmalı
+#
+#   2. madde bu sistemin kalbi. Eskiden TEK bir kelimenin
+#   tutması cevap vermeye yetiyordu ve şu hata oluyordu:
+#
+#     "overland setim nasıl kaplama yaptım"
+#        -> 'nasıl' soru şartını geçti
+#        -> 'kaplama' skin konusunda geçiyordu
+#        -> bot skin cevabı verdi
+#
+#   Artık 'kaplama' ZAYIF bir kelime; tek başına asla yetmez.
+#   Üstüne skin konusunda 'set' yasaklı, yani o cümle iki kez
+#   eleniyor.
+# ------------------------------------------------------------
+
+puanlama:
+  guclu: 3          # bir güçlü kelimenin getirdiği puan
+  zayif: 1          # bir zayıf kelimenin getirdiği puan
+  kalip-bonus: 1    # çok kelimeli kalıplara ek puan
+  en-az-puan: 2     # bu puanın altı cevaplanmaz
+  fark: 2           # kazanan, ikinciyi en az bu kadar geçmeli
+
+
+# ------------------------------------------------------------
+#   ENGELLEYİCİ KELİMELER
+#
+#   Oyuncular birbirine sürekli "kazma satar mısın", "kaça",
+#   "veren var mı" diye yazıyor. Bunlar sunucuya sorulmuş soru
+#   değil, oyuncular arası ticaret. İçinde konu kelimesi geçse
+#   bile bu kalıplardan biri varsa eklenti HİÇ bakmaz.
+#
+#   NOT: "takas" bu listeden ÇIKARILDI. Sunucuda artık /takas
+#   diye gerçek bir sistem var; kelimeyi engelleyici bırakmak
+#   o konunun hiçbir zaman cevaplanamaması demekti.
+# ------------------------------------------------------------
+
+engelleyici-kelimeler:
+  - "satar mısın"
+  - "satarmısın"
+  - "satar mısınız"
+  - "satan var"
+  - "satılık"
+  - "alır mısın"
+  - "alırmısın"
+  - "alan var"
+  - "veren var"
+  - "verir misin"
+  - "verirmisin"
+  - "kaça"
+  - "kaç para"
+  - "kaç tl"
+  - "ucuza"
+  - "lazım olan"
+  - "isteyen var"
+  - "atar mısın"
+  - "atarmısın"
+
+
+# ============================================================
+#   KONULAR
+#
+#   guclu : Tek başına konuyu belirler. Başka anlama gelme
+#           ihtimali yok denecek kadar az.
+#
+#   zayif : Konuya işaret eder ama tek başına yetmez. Günlük
+#           dilde başka anlamda da kullanılabilir. Yanında
+#           ikinci bir sinyal ister.
+#
+#   yasak : Bu kelime geçiyorsa konu TAMAMEN elenir. İki
+#           konunun kesiştiği yerde hakemlik eder.
+#
+#   oncelik : Varsayılan 0. YEDEK konulara -1 verilir. Yüksek
+#           öncelikli bir konu geçerli sayıldıysa, düşük öncelikli
+#           olanlar hiç hesaba katılmaz. "oyuna-baslama" bunun
+#           tek örneği: geniş kalıplarla çalışır, özel bir konu
+#           varken onun önüne geçmemeli.
+#
+#   KÖK YAZMA KURALLARI
+#   Türkçe ekli bir dil olduğu için kök uzunluğuna göre farklı
+#   kural uygulanır:
+#
+#     6+ harf : kelimenin herhangi bir yerinde geçebilir
+#     4-5 harf: kelime bu kökle BAŞLAMALI  (para -> parayı)
+#     1-3 harf: TAM eşleşme şartı          (ah -> sadece "ah")
+#
+#   Kuralı elle zorlamak istersen:
+#     "=kelime"  tam eşleşme şart
+#     "*kelime"  içinde geçmesi yeter
+#
+#   Türkçe karakter yazabilirsin, eklenti kendi sadeleştirir.
+#   CEVAP en fazla 2 satır olsun - sohbette okunacak.
+# ============================================================
+
+konular:
+
+  # ================= EKONOMİ =================
+
+  para-kazanma:
+    aktif: true
+    guclu: [para kazan, nasıl kazan, para yap, nasıl zengin, para kasma, para kasmak, para kazanma]
+    zayif: [para, kazanç, zengin, gelir, kasmak]
+    # 'kristal' yasak: "kristal nasıl kazanılır" sorusu bu konuya
+    # değil kristal konusuna ait. Yasak olmasaydı iki konu yakın
+    # puan alır ve fark kuralı yüzünden ikisi de susardı.
+    yasak: [pay, yolla, gönder, transfer, kristal]
+    cevap:
+      - "&fen hızlı yol &e/gunlukgorev &fve &e/order &f— ikisi de sermaye istemez."
+      - "&7Sonra &e/sell &fve &e/ah&7. Her gece 00:00'da seviyene göre maaş da alırsın."
+
+  para-gonderme:
+    aktif: true
+    guclu: [para yolla, para gönder, para atsam, para transfer, paytoggle, nasıl yolla, nasıl gönder]
+    zayif: [pay, yolla, gönder, para]
+    yasak: []
+    cevap:
+      - "&e/pay <oyuncu> <miktar> &file başka bir oyuncuya para gönderirsin."
+      - "&7Para almayı kapatmak için: &e/paytoggle"
+
+  maas-hazine:
+    aktif: true
+    guclu: [maaş, hazine]
+    zayif: [gece ödül, her gece]
+    yasak: []
+    cevap:
+      - "&fHer gece &e00:00'da &fseviyene göre maaş yatar. Hazine: &e/hazine"
+      - "&7Almak için son 24 saatte en az &f15 dakika &7oynamış olman gerekir."
+
+  vergi:
+    aktif: true
+    guclu: [vergi, komisyon]
+    zayif: [kesinti]
+    yasak: []
+    cevap:
+      - "&fHer ticaretten kesilen vergi yok olmaz, &ehazineye &fgider."
+      - "&7Her gece maaş olarak oyunculara geri dağıtılır. Kristal alışverişi vergiden muaftır."
+
+  esya-satma:
+    aktif: true
+    guclu: [nasıl sat, nerede sat, nerde sat, nereden sat, nereye sat, satış nasıl]
+    zayif: [sell, sat, satmak, satıyorum]
+    # 'spawner/anahtar/kristal' yasak: "spawner nerede satılıyor"
+    # bir SATMA sorusu değil, nereden ALINIR sorusudur.
+    yasak: [ah sell, açık artırma, market, sipariş, spawner, anahtar, kristal]
+    cevap:
+      - "&fEnvanterindekini &e/sell &file sunucuya satarsın."
+      - "&7Oyunculara satmak için &e/ah sell <fiyat>&7 — komisyon yok."
+
+  acik-artirma:
+    aktif: true
+    guclu: [açık artırma, ah sell, ah collect, ah nasıl, ah komut, oyuncu pazarı]
+    zayif: [ah, artırma, ilan]
+    yasak: []
+    cevap:
+      - "&e/ah &f— oyuncu pazarı. &e/ah sell <fiyat> &file elindekini ilana koyarsın."
+      - "&7İlan ücreti ve komisyon yok. Süresi dolanları &e/ah collect &7ile alırsın."
+
+  market:
+    aktif: true
+    guclu: [market, mağaza]
+    zayif: [dükkan]
+    yasak: [pazaryeri, tezgah, kirala]
+    cevap:
+      - "&e/market &f— sunucu mağazası. End, Nether, Aletler ve Yemek bölümleri para ile."
+      - "&7Kristaller bölümünden kasa anahtarı ve spawner alınır."
+
+  siparis:
+    aktif: true
+    guclu: [sipariş, order]
+    zayif: [talep]
+    yasak: []
+    cevap:
+      - "&e/order &f— alıcı ilan verir, sen getirip parayı anında alırsın."
+      - "&7Yeni oyuncu için en hızlı para burası, sermaye istemiyor."
+
+  pazaryeri:
+    aktif: true
+    guclu: [pazaryeri, tezgah, dükkan kirala]
+    zayif: [pazar, kirala, npc]
+    yasak: [market]
+    cevap:
+      - "&fSpawn'daki pazarda kişiye özel NPC dükkanları var, siteden haftalık kiralanır."
+      - "&7Kendi fiyatınla 7/24 satarsın, sen çevrimdışıyken bile çalışır."
+
+  takas:
+    aktif: true
+    guclu: [takas]
+    zayif: [güvenli değişim, dolandırılmadan]
+    yasak: []
+    cevap:
+      - "&e/takas <oyuncu> &f— iki taraf da eşyayı görerek onaylar, dolandırılma olmaz."
+      - "&7Onaydan sonra 3 saniye kilit vardır; biri eşya değiştirirse onaylar sıfırlanır."
+
+  kristal:
+    aktif: true
+    guclu: [kristal, afk alan, afk nerede, afk nasıl]
+    zayif: [afk]
+    yasak: []
+    cevap:
+      - "&fKristal &eAFK alanında &fdurarak kazanılır — &e/ewarp afk&f. Her dakika yazar."
+      - "&7Bakiyen: &e/kristal&7. Kasa anahtarı ve spawner sadece kristalle alınır."
+
+  jackpot:
+    aktif: true
+    guclu: [jackpot]
+    zayif: [bahis, kumar, havuz]
+    yasak: []
+    cevap:
+      - "&e/jackpot &f— bahsini yatırırsın, havuz büyür, kazanan hepsini alır."
+      - "&7Basit 500-2.000, Standart 5.000-20.000, Premium 50.000-200.000."
+
+  siralama:
+    aktif: true
+    guclu: [baltop, en zengin, lider tablo, zenginler]
+    zayif: [sıralama, sıralamada]
+    yasak: []
+    cevap:
+      - "&e/baltop &fen zenginler, &e/siralama &fsezon sıralamaları, &e/kristal top &fkristal."
+      - "&7Spawn'daki tabelalarda da canlı görünüyor."
+
+  satis-carpani:
+    aktif: true
+    guclu: [satış çarpan, çarpan nasıl, çarpanı artır, kademe nasıl]
+    zayif: [çarpan, kademe]
+    yasak: []
+    cevap:
+      - "&fAynı kategoriden çok sattıkça &esatış çarpanın &fyükselir, 20 kademe var."
+      - "&7Rütbe bonusu da eklenir. &e/sell &7menüsünden kademeni görürsün."
+
+  # ================= OYNANIŞ =================
+
+  rtp:
+    aktif: true
+    guclu: [rtp, rastgele ışın, vahşi doğa]
+    zayif: [ışınlan, wild, rastgele]
+    yasak: [tpa, tpaccept, evime, sethome]
+    cevap:
+      - "&e/rtp &fmenüsünden bölge seçersin, ya da doğrudan &e/rtporman &f· &e/rtpnether &f· &e/rtpend&f."
+      - "&7Sayarken hareket edersen iptal olur. Bekleme süresi rütbeyle kısalır."
+
+  orman-gitme:
+    aktif: true
+    guclu: [rtporman, ormana nasıl, ormana git, doğaya nasıl, ana dünya]
+    zayif: [orman, survival]
+    yasak: [nether, end]
+    cevap:
+      - "&e/rtporman &file ana dünyada rastgele bir noktaya ışınlanırsın."
+      - "&7Spawn'daki RTP portalına girerek de gidebilirsin."
+
+  nether-gitme:
+    aktif: true
+    guclu: [rtpnether, nethere nasıl, nethera nasıl, nethere git, cehenneme]
+    zayif: [nether]
+    yasak: []
+    cevap:
+      - "&e/rtpnether &file doğrudan Nether'e ışınlanırsın, portal kurmana gerek yok."
+      - "&7Bekleme süresi rütbeyle kısalır."
+
+  end-gitme:
+    aktif: true
+    guclu: [rtpend, ende nasıl, end nasıl, ende git, ejderha nerede, end portal]
+    zayif: [end, ejderha]
+    yasak: []
+    cevap:
+      - "&e/rtpend &file End'e ışınlanırsın."
+      - "&7Bekleme süresi rütbeyle kısalır."
+
+  spawn-warp:
+    aktif: true
+    guclu: [spawna nasıl, spawn nasıl, spawn nerede, warp nasıl, warp nerede, warp listesi]
+    zayif: [spawn, warp]
+    yasak: [spawner, doğurucu]
+    cevap:
+      - "&e/spawn &fana meydana döner, &e/warp &fwarp menüsünü açar."
+      - "&7Warplar: Spawn · Pazaryeri · Kasalar · AFK Alanı · Vahşi Bölge"
+
+  menu:
+    aktif: true
+    guclu: [menü nasıl, menü nerede, menü komut, ana menü]
+    zayif: [menü, komut]
+    yasak: []
+    cevap:
+      - "&e/menu &f— sunucudaki bütün sistemler tek ekranda."
+      - "&7Yeni başlayanlar için &e/baslangic &7rehberi de var."
+
+  kasa:
+    aktif: true
+    guclu: [kasa anahtar, crate, anahtar nerede, anahtar nasıl, kasa aç, kasa nasıl, kasa nerede, kasalar nerede]
+    zayif: [kasa, anahtar]
+    yasak: [ender sandık]
+    cevap:
+      - "&fKasalar &eWarp → Kasa &falanında. Anahtar &e/market &fkristal bölümünden alınır."
+      - "&7Her saat başı sunucudaki herkese ücretsiz anahtar dağıtılır."
+
+  ametist:
+    aktif: true
+    guclu: [ametist]
+    zayif: [süreli eşya, kendini imha]
+    yasak: []
+    cevap:
+      - "&fAmetist eşyaları siteden alınır ve &eelinize geçtikten 1 gün sonra &fyok olur."
+      - "&7Süresi eşyanın kendi içinde yazar. &e/ah &7ve &e/sell &7ile satılamaz."
+
+  spawner:
+    aktif: true
+    guclu: [spawner, doğurucu]
+    zayif: []
+    yasak: []
+    cevap:
+      - "&fSpawner &e/market &f→ Kristaller bölümünden kristalle alınır."
+      - "&7Domuzdan demir goleme kadar dokuz çeşit var. Spawner kasasından da çıkar."
+
+  claim-koruma:
+    aktif: true
+    guclu: [claim, arazi koruma, üs koruma, koruma alanı, üssümü]
+    zayif: [baskın, korunuyor, üssüm]
+    yasak: [envanter]
+    cevap:
+      - "&cBu sunucuda claim yok &f— hiçbir yapı otomatik korunmaz, üs basmak serbest."
+      - "&7Üssünü spawn'dan uzağa kur, koordinatını kimseye söyleme. Ender sandık çalınmaz."
+
+  olunce-esya:
+    aktif: true
+    guclu: [ölünce, öldüğüm, ölürsem, ölürse, eşyalar gid, eşyam gid, eşyalar düş]
+    zayif: [ölüm, ölünce ne]
+    yasak: []
+    cevap:
+      - "&fÖlünce eşyaların yere düşer. &eEnvanter koruma &fhakkın varsa korunur."
+      - "&7Ender sandıktakiler her zaman güvende."
+
+  envanter-koruma:
+    aktif: true
+    guclu: [envanter koruma, envkoruma, envanterkoruma]
+    zayif: [envanter]
+    yasak: []
+    cevap:
+      - "&e/envanterkoruma &file hakkını görürsün. Siteden satın alınır."
+      - "&7Hakkın varken öldüğünde eşyaların düşmez, bir hak harcanır."
+
+  savas-etiketi:
+    aktif: true
+    guclu: [savaş etiket, combatlog, combat]
+    zayif: [pvp, adam kes, adam öldür, vurunca]
+    yasak: []
+    cevap:
+      - "&fBir oyuncuya vurunca &c15 saniye &fsavaş etiketi alırsın — ışınlanamaz, çıkamazsın."
+      - "&7Çıkarsan karakterin ölür ve eşyaların yere düşer."
+
+  ev-home:
+    aktif: true
+    guclu: [sethome, delhome, ev nasıl, ev hakk, home nasıl, evime nasıl]
+    zayif: [evim, evime, evimi, home]
+    yasak: []
+    cevap:
+      - "&e/sethome <ad> &file nokta kaydeder, &e/ev &file dönersin."
+      - "&7Ev hakkın rütbeyle 1'den 10'a çıkar. Silmek: &e/delhome <ad>"
+
+  takim:
+    aktif: true
+    guclu: [takım kur, takım nasıl, takıma nasıl, klan, team create]
+    zayif: [takım, team, tc, kurulur]
+    yasak: []
+    cevap:
+      - "&e/team create <isim> &file kurulur, &f100.000 TL. Katılım sadece davetle."
+      - "&7Takım arkadaşına hasar veremezsin. Takım sohbeti: &e/tc"
+
+  isinlanma-istegi:
+    aktif: true
+    guclu: [tpaccept, tpdeny, tptoggle, ışınlanma isteği, yanına nasıl, yanıma nasıl]
+    zayif: [tpa, tp, yanına gel]
+    yasak: [rtp]
+    cevap:
+      - "&e/tpa <oyuncu> &file ışınlanma isteği gönderirsin, karşı taraf kabul eder."
+      - "&7Kabul: &e/tpaccept &7· Reddet: &e/tpdeny &7· Kapatmak: &e/tptoggle"
+
+  # ================= İLERLEME =================
+
+  seviye:
+    aktif: true
+    guclu: [seviye, level]
+    zayif: [lvl, puan]
+    yasak: []
+    cevap:
+      - "&e/seviye &f— madencilik, mob avı, görev ve yarıştan puan kazanırsın."
+      - "&7Her 10 seviyede &c1 ekstra kalp&7. Çıktığın her 10'luk dilim kalıcı."
+
+  gunluk-gorev:
+    aktif: true
+    guclu: [günlük görev, gunlukgorev]
+    zayif: [görev]
+    yasak: []
+    cevap:
+      - "&e/gunlukgorev &f— her gece 3 rastgele eşya seçilir, toplayıp satarsın."
+      - "&7Aynı eşyadan çok sattıkça birim fiyatın yükselir, 2,5 kata kadar."
+
+  yaris:
+    aktif: true
+    guclu: [yarış, race, saatlik etkinlik]
+    zayif: [etkinlik]
+    yasak: [gökyüzü, ada]
+    cevap:
+      - "&fHer saat başı &e5 dakikalık yarış &fbaşlar, en çok yapan kazanır. &e/yaris"
+      - "&7Ödül sadece birinciye: para, kasa anahtarı, netherite, bazen Elytra."
+
+  gokyuzu-etkinlik:
+    aktif: true
+    guclu: [gökyüzü, uçan ada, havada ada, ada etkinlik, gokada]
+    zayif: [ada]
+    yasak: []
+    cevap:
+      - "&fBelirli aralıklarla ormanın üzerinde &ehavada bir ada &fbelirir, 20 dakika durur."
+      - "&7İçindeki ganimet için herkes koşar. Süre dolunca ada izsiz silinir."
+
+  vip-rutbe:
+    aktif: true
+    guclu: [rütbe, sponsor, lvip, vip nasıl, vip nereden, vip kaç]
+    zayif: [vip, rank]
+    yasak: []
+    cevap:
+      - "&e/vip &fmenüsünden rütbeleri ve ayrıcalıklarını görürsün."
+      - "&7Siteden alınır: &elivamc.com"
+
+  kit:
+    aktif: true
+    guclu: [kit nasıl, kit nerede, başlangıç kit, kit alamıyorum]
+    zayif: [kit]
+    yasak: []
+    cevap:
+      - "&e/kit &f— rütbene göre açılan kitleri gösterir."
+      - "&7Sunucuya ilk giren herkes başlangıç kitini otomatik alır."
+
+  site-paket:
+    aktif: true
+    guclu: [paketim gelmedi, ürünüm gelmedi, satın aldım gelmedi, vp claim]
+    zayif: [gelmedi, teslim]
+    yasak: []
+    cevap:
+      - "&fSiteden aldığın paket oyuna girince gelir; gelmediyse &e/vp claim &fyaz."
+      - "&7Yine gelmezse Discord'dan yetkiliye ulaş: &ediscord.gg/livamc"
+
+  # ================= SUNUCU =================
+
+  discord:
+    aktif: true
+    guclu: [discord, sesli sohbet]
+    zayif: []
+    yasak: [hesapeşle, hesap eşle, bağla, çekiliş]
+    cevap:
+      - "&e/discord &f— discord.gg/livamc. Mesafeye duyarlı sesli sohbet de var."
+      - "&7Hesabını &e/hesapeşle &7ile bağlarsan her gün ödül alırsın: &e/discordödül"
+
+  hesap-esleme:
+    aktif: true
+    # 'hesabımı' güçlü çünkü tek başına bu konuyu anlatır; ama
+    # güvenlik-2fa'daki "hesabım çalın" ile karışmasın diye orada
+    # ayrı bir kalıp var - ikisi farklı kök.
+    guclu: [hesapeşle, hesap eşle, hesabımı, hesap bağla, discordödül]
+    zayif: [bağla, eşleme]
+    yasak: [çalın, şifre]
+    cevap:
+      - "&e/hesapeşle &fyaz, çıkan 4 haneli kodu Discord'da bota özelden gönder."
+      - "&7Sonra &e/discordödül &7ile her gün ödülünü alırsın."
+
+  oy-verme:
+    aktif: true
+    guclu: [oy ver, oy nasıl, vote, oylama, oy kasası]
+    zayif: [oy]
+    yasak: []
+    cevap:
+      - "&e/vote &f— üç siteden ayrı ayrı oy verebilirsin."
+      - "&7Her oy için bir &eOy Kasası Anahtarı&7. Günde bir kez, her site için."
+
+  skin:
+    aktif: true
+    # 'kaplama' BİLEREK zayıf: oyuncular zırh kaplamasından da
+    # bahsediyor. Yasak listesi de o cümleleri ikinci kez eliyor.
+    guclu: [skin, skinim]
+    zayif: [kaplama, görünmüyor, karakterim]
+    yasak: ["*set", zırh, trim, netherite, armor, kalıp, elmas, demir]
+    cevap:
+      - "&fSkin'in görünmesi için orijinal Minecraft hesabı gerekiyor."
+      - "&7Orijinal hesapla girip yine görünmüyorsa Discord'dan yetkiliye yaz."
+
+  sunucu-bilgi:
+    aktif: true
+    guclu: [ip nedir, sunucu ip, sunucu port, bedrock, sunucunun ipi]
+    zayif: [sürüm, versiyon, ip]
+    yasak: []
+    cevap:
+      - "&fJava: &egir.livamc.com &f· Bedrock: &ebedrock.livamc.com &7port &e19132"
+      - "&7Sürüm: &fMinecraft 26.2 &7· Site: &elivamc.com"
+
+  site-kredi:
+    aktif: true
+    guclu: [site kredi, siteden nasıl, livamc com]
+    zayif: [kredi, site, satın al]
+    yasak: [gelmedi, claim]
+    cevap:
+      - "&elivamc.com &f— rütbe, envanter koruma ve pazar tezgâhı buradan alınır."
+      - "&7Sezon sıralamalarında ilk üçe girenlere site kredisi hediye edilir."
+
+  kurallar:
+    aktif: true
+    guclu: [kurallar]
+    zayif: [kural, yasak mı, serbest mi]
+    yasak: []
+    cevap:
+      - "&e/kurallar &f— hile, dupe, dolandırıcılık ve reklam kalıcı yasak sebebi."
+      - "&7Vahşi doğada PvP ve üs basmak serbesttir, o yasak değil."
+
+  sikayet:
+    aktif: true
+    guclu: [şikayet, report, hileci, hile kullan, dolandır]
+    zayif: [hile, yetkili nerede, yetkili yok]
+    yasak: []
+    cevap:
+      - "&e/report &file şikayet edebilirsin, kanıt (video veya ekran görüntüsü) hazırla."
+      - "&7Discord'dan yetkiliye de ulaşabilirsin: &ediscord.gg/livamc"
+
+  guvenlik-2fa:
+    aktif: true
+    guclu: [2fa, doğrulama, hesabım çalın, şifremi]
+    zayif: [şifre, güvenlik]
+    yasak: []
+    cevap:
+      - "&e/2fa &file hesabına çift aşamalı doğrulama ekleyebilirsin."
+      - "&7Şifreni kimseyle paylaşma, yetkililer asla şifre sormaz."
+
+  # ================= YENİ OYUNCU =================
+
+  oyuna-baslama:
+    # Bu konu SORU ŞARTI ARANMADAN tetiklenir: "knk yeni başladım"
+    # bir soru değil ama tam da yardım edilmesi gereken an.
+    # Bu yüzden bütün kökleri çok kelimeli ve çok özel tutuldu.
+    soru-gerekmez: true
+    # YEDEK KONU. "nasıl oynanır", "ne yapmalıyım" gibi geniş
+    # kalıplarla çalıştığı için özel bir konu varken asla onun
+    # önüne geçmemeli. -1 önceliği bunu garanti eder:
+    # "jackpot nasıl oynanır" -> jackpot, "yeni başladım" -> bu konu.
+    oncelik: -1
+    aktif: true
+    guclu: [yeni başladım, nereden başla, ilk ne yap, nasıl oynanır, oyuna başla, nasıl başla, yeni geldim]
+    # "ne yapmalıyım" BİLEREK zayıf: "banlandım ne yapmalıyım",
+    # "skinim görünmüyor ne yapmalıyım" gibi cümlelerde de geçiyor.
+    # Güçlü olsaydı bu konu onların önüne geçerdi.
+    zayif: [yeniyim, ne yapmalıyım, napıcam]
+    yasak: [ban, ceza, skin, şikayet]
+    cevap:
+      - "&e/baslangic &frehberini aç, sonra &e/rtporman &file vahşi doğaya atla ve üssünü kur."
+      - "&7İlk paran için &e/gunlukgorev &7ve &e/order&7. Menü için &e/menu&7."
+
+  en-iyi-farm:
+    aktif: true
+    guclu: [en iyi farm, hangi farm, farm kur, çiftlik kur, ne kazandır, hangisi kazandır]
+    zayif: [farm, çiftlik]
+    yasak: []
+    cevap:
+      - "&fEn çok kazandıran &edemir golem spawner &fçiftliği — demir külçenin fiyatı düşmüyor."
+      - "&7Spawner'lar &e/market &7kristal bölümünden alınır. Mahsul çiftlikleri de sabırlıya iyi gelir."
+
+  oyuncu-sayisi:
+    aktif: true
+    guclu: [kaç kişi, kaç oyuncu, online kaç, doluluk]
+    zayif: []
+    yasak: []
+    cevap:
+      - "&fSağ üstteki oyuncu listesinden (&eTAB &ftuşu) anlık sayıyı görürsün."
+      - "&7Sunucu 7/24 açık, akşam saatleri en yoğun zaman."
+
+  # ================= EŞYA VE ÜRETİM =================
+
+  ender-sandik:
+    aktif: true
+    guclu: [ender sandık, endersandık]
+    zayif: [ec]
+    yasak: []
+    cevap:
+      - "&fEnder sandık &esenin kişisel deponuz &f— içindekiler asla çalınamaz, ölünce de kaybolmaz."
+      - "&7Değerli eşyalarını orada tut. &e/ec &7komutu rütbe ayrıcalığıdır."
+
+  buyu-masasi:
+    aktif: true
+    guclu: [büyü masası, enchant, büyü nasıl, büyü yap, kitap büyü]
+    zayif: [büyü, kitaplık]
+    yasak: []
+    cevap:
+      - "&fBüyü masası ve etrafına 15 kitaplıkla en yüksek seviyeye çıkarsın."
+      - "&7Hazır büyülü kitapları &e/ah &7ve kasalardan da bulabilirsin."
+
+  iksir:
+    aktif: true
+    guclu: [iksir, kaynatma, potion]
+    zayif: []
+    yasak: []
+    cevap:
+      - "&fKaynatma standı + su şişesi + nether mantarı ile başlarsın."
+      - "&7Nether mantarını &e/rtpnether &7ile gidip kalelerde bulursun."
+
+  # ================= HESAP VE AYARLAR =================
+
+  oynama-suresi:
+    aktif: true
+    guclu: [oynama süre, kaç saat oynad, ne kadar oynad, surebak]
+    zayif: [süremi, sürem]
+    yasak: [bekleme, cooldown]
+    cevap:
+      - "&e/sure &file kendi oynama süreni görürsün."
+      - "&7Başkasınınki için: &e/surebak <oyuncu>"
+
+  etiket-renk:
+    aktif: true
+    guclu: [etiket, isim rengi, sohbet rengi, nick nasıl]
+    zayif: [renk nasıl, renk]
+    # 'savaş' yasak: "savaş etiketi ne kadar sürüyor" bu konu değil.
+    yasak: [savaş, combat, pvp]
+    cevap:
+      - "&e/etiket &file isminin yanındaki etiketi seçersin."
+      - "&7Sohbet rengi ve etiket rütbe ayrıcalığıdır: &e/vip"
+
+  ucma-fly:
+    aktif: true
+    guclu: [nasıl uçar, fly nasıl, uçabil, uçmak]
+    zayif: [uçma, fly]
+    yasak: []
+    cevap:
+      - "&fUçmak rütbe ayrıcalığıdır, &e/vip &fmenüsünden hangi rütbede olduğunu görürsün."
+      - "&7Vahşi doğada uçmak kapalıdır, sadece belirli alanlarda çalışır."
+
+  ceza-itiraz:
+    aktif: true
+    guclu: [ban yedim, banland, ceza itiraz, susturuld, unban, yasakland]
+    zayif: [ban, ceza]
+    yasak: []
+    cevap:
+      - "&fCeza itirazı sohbette tartışılmaz — Discord'dan yetkiliye özelden ulaş."
+      - "&7&ediscord.gg/livamc &7· Kanıtın varsa hazırla."
