@@ -402,3 +402,16 @@ testler:
     beklenen: olunce-esya
   - mesaj: "olduğum yerde iki spawner var değerli mi"
     beklenen: yok
+
+  # ---------- SUNUCUDA YAŞANAN: "yarış ne işe yarıyor" cevapsız kaldı ----------
+  - mesaj: "yarış ne işe yarıyor"
+    beklenen: yaris-nedir
+  - mesaj: "yarış ne işe yarıyor?"
+    beklenen: yaris-nedir
+  - mesaj: "yarış ne"
+    beklenen: yaris-nedir
+  - mesaj: "yarış ne zaman başlıyor"
+    beklenen: yaris
+  - mesaj: "yarış ne güzeldi kim kazandı"
+    beklenen: yaris
+

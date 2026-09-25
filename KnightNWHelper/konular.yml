@@ -489,8 +489,8 @@ konular:
     zayif: [etkinlik]
     yasak: [gökyüzü, ada]
     cevap:
-      - "&fHer saat başı &e5 dakikalık yarış &fbaşlar, en çok yapan kazanır. &e/yaris"
-      - "&7Ödül sadece birinciye: para, kasa anahtarı, netherite, bazen Elytra."
+      - "&fSaatte 1 &eyarış etkinliği &fdüzenlenir: rastgele bir görev verilir. &e/yaris"
+      - "&7Birinci olan oyuncu rastgele bir ödül kazanır: para, kasa anahtarı, netherite, bazen Elytra."
 
   gokyuzu-etkinlik:
     aktif: true
@@ -823,3 +823,18 @@ konular:
     cevap:
       - "&e/back &fyazarak öldüğün yere geri dönersin."
       - "&7Eşyaların hâlâ oradaysa hızlı ol, başkası da alabilir."
+
+  yaris-nedir:
+    # SORU ŞARTI ARANMAZ: eklenti "yarış ne işe yarıyor" cümlesini soru
+    # saymıyor (tek başına "ne" soru kelimesi değil). Bu yüzden
+    # "yarış ne..." kalıbı için ayrı bir konu var. Öncelik 1: soru
+    # işaretiyle yazılırsa yaris konusuyla çakışıp susmasın.
+    soru-gerekmez: true
+    oncelik: 1
+    aktif: true
+    guclu: [yarış ne, yarışı ne, yarışlar ne, yarış etkinliği ne]
+    zayif: []
+    yasak: [zaman, kim, kazan, "=bu"]
+    cevap:
+      - "&fSaatte 1 &eyarış etkinliği &fdüzenlenir: rastgele bir görev verilir. &e/yaris"
+      - "&7Birinci olan oyuncu rastgele bir ödül kazanır: para, kasa anahtarı, netherite, bazen Elytra."
