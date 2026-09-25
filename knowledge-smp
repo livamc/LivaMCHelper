@@ -127,7 +127,7 @@ entries:
     content: "Bir oyuncunun elinden ölmek -50 puan, mob/düşme/lav gibi sebeplerle ölmek -15 puan. Ayrıca 24 saatten uzun süre girmezsen her gün toplam puanının %2'si erir."
 
   - title: "SSS: Seviyem sıfırdan mı başlar, düşer mi?"
-    content: "Çıktığın her 10'luk dilim kalıcı olarak kilitlenir. Seviye 63'e ulaştıysan ne kadar ölürsen öl, ne kadar ara verirsen ver 60'ın altına inmezsin. Emeğin silinmez. Ayrıca her ayın 1'inde sezon sıfırlanır ve arşivlenir, herkes aynı çizgiden başlar."
+    content: "Çıktığın her 10'luk dilim kalıcı olarak kilitlenir. Seviye 63'e ulaştıysan o sezon boyunca ne kadar ölürsen öl, ne kadar ara verirsen ver 60'ın altına inmezsin. Ancak her ay sonunda yeni sezona geçilir ve seviyeler sıfırlanır; eski sezon arşivlenir ve herkes yeni sezona aynı çizgiden başlar. Sunucu (üs, eşya, para, rütbe) sıfırlanmaz."
 
   - title: "SSS: Fazladan kalp nasıl kazanılır?"
     content: "Her 10 seviyede 1 ekstra kalp kazanırsın. Seviye 20'de 12 kalple, seviye 100'de 20 kalple dolaşırsın. Bu yüzden PvP'de seviyeli oyuncu gerçekten daha zor devrilir."
@@ -226,7 +226,7 @@ entries:
     content: "Yarış: 1. 500, 2. 400, 3. 300 kredi. Oyuncu Öldürme: 300/200/100. Mob Öldürme: 300/200/100. Mahsül Kırma: 200/150/100. Balık Tutma: 200/150/100. Her sezon toplam 3.300 kredi dağıtılır. Krediler site hesabına tanımlanır ve mağazadan harcanır."
 
   - title: "SSS: Sezon bitince sunucu sıfırlanıyor mu?"
-    content: "Hayır. Sezon bittiğinde üssün, eşyaların, paran ve rütben olduğu gibi kalır. Sıfırlanan tek şey sıralamalardır. Yeni ay başladığında herkes eşit şartlarda yeniden yarışır, geç katılman seni oyun dışı bırakmaz."
+    content: "Hayır. Hayır, sunucu sıfırlanmaz. Sezon bittiğinde üssün, eşyaların, paran ve rütben olduğu gibi kalır. Sıfırlanan şeyler seviyeler ve sezon sıralamalarıdır: her ay sonunda yeni sezona geçilir, herkes seviye 1'den başlar. Seviyeye bağlı ekstra kalpler ve maaş payı da yeni seviyene göre hesaplanır. Yeni ay başladığında herkes eşit şartlarda yeniden yarışır, geç katılman seni oyun dışı bırakmaz."
 
   - title: "SSS: Sezon sıralamasını nereden görürüm?"
     content: "Spawn'daki tabelalarda beş sıralamanın da ilk üçü canlı görünür. Oyun içinde /sezon yazarsan ödülleri, sıralamaları ve sezonun bitmesine kalan süreyi tek ekranda görürsün."
@@ -365,7 +365,7 @@ systems:
       - Uzun süre girmemek: 24 saatten sonra her gün toplam puanının %2'si erir
 
       SEVİYE TABANI
-      Çıktığın her 10'luk dilim kalıcı olarak kilitlenir. Seviye 63'e ulaştıysan ne ölürsen öl, ne kadar ara verirsen ver 60'ın altına inmezsin. Emeğin silinmez.
+      Çıktığın her 10'luk dilim sezon boyunca kilitlenir. Seviye 63'e ulaştıysan o sezon içinde ne ölürsen öl, ne kadar ara verirsen ver 60'ın altına inmezsin. Taban koruması yalnızca sezon içinde geçerlidir; sezon sonunda seviyeler sıfırlanır.
 
       KALP ÖDÜLÜ
       Her 10 seviyede 1 ekstra kalp kazanırsın. Seviye 20'de 12 kalp, seviye 100'de 20 kalple dolaşırsın. PvP'de seviyeli oyuncu gerçekten daha zor devrilir.
@@ -373,8 +373,8 @@ systems:
       SEVİYENİN EKONOMİK ANLAMI
       Gece dağıtılan maaş seviyeye göre hesaplanır. Yani seviye sadece prestij değil, doğrudan gelir demektir.
 
-      AYLIK SIFIRLAMA
-      Her ayın 1'inde seviyeler sıfırlanır ve sezon arşivlenir. Herkes aynı çizgiden başlar, geç katılan oyuncu asla yetişemez diye bir şey yoktur.
+      AYLIK SIFIRLAMA (YENİ SEZON)
+      Her ay sonunda yeni sezona geçilir: seviyeler sıfırlanır ve eski sezon arşivlenir. Sunucu sıfırlanmaz; üs, eşya, para ve rütbe olduğu gibi kalır. Herkes aynı çizgiden başlar, geç katılan oyuncu asla yetişemez diye bir şey yoktur.
 
   - title: "Takım Sistemi"
     content: |
@@ -611,7 +611,7 @@ systems:
       Her ay seçili istatistiklerde ilk üçe girenlere site kredisi hediye edilir. Oynadığın her şey arka planda sayılır; ay sonunda sıralamalar kapanır ve ödüller dağıtılır.
 
       SUNUCU SIFIRLANMAZ
-      Sezon bittiğinde üssün, eşyaların, paran ve rütben olduğu gibi kalır. Sıfırlanan tek şey sıralamalardır. Yeni ay başladığında herkes eşit şartlarda yeniden yarışır; geç katılman seni oyun dışı bırakmaz.
+      Sezon bittiğinde üssün, eşyaların, paran ve rütben olduğu gibi kalır. Sıfırlanan şeyler seviyeler ve sezon sıralamalarıdır: her ay sonunda yeni sezona geçilir, herkes seviye 1'den başlar. Yeni ay başladığında herkes eşit şartlarda yeniden yarışır; geç katılman seni oyun dışı bırakmaz.
 
       ÖDÜLLER (1. / 2. / 3.)
       - Yarış: 500 / 400 / 300 kredi
