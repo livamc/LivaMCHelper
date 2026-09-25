@@ -227,3 +227,112 @@ testler:
     beklenen: kasa
   - mesaj: "kasalar nerede acaba"
     beklenen: kasa
+
+
+  # ============================================================
+  #   ÜÇÜNCÜ TUR: sohbet kayıtlarından (ogrenme/cevapsiz.log)
+  #
+  #   Olumlu örneklerin hepsi kayıtlarda cevapsız kalmış GERÇEK
+  #   oyuncu sorularıdır. "yok" beklenenler ise botun araya girip
+  #   alakasız cevap verdiği türden oyuncular arası mesajlar.
+  # ============================================================
+
+  # ---------- IŞINLANMA (SOHBETTE CEVAPSIZ KALMIŞTI) ----------
+  - mesaj: "tp nasıl atıcam"
+    beklenen: isinlanma-istegi
+  - mesaj: "nası tp atarım"
+    beklenen: isinlanma-istegi
+  - mesaj: "tpa kime atabiliyim"
+    beklenen: isinlanma-istegi
+  - mesaj: "tpa nasıl atılıyor"
+    beklenen: isinlanma-istegi
+  - mesaj: "arkadaşımın yanına nasıl giderim"
+    beklenen: isinlanma-istegi
+  - mesaj: "egemen tpa attım mı"
+    beklenen: yok
+  - mesaj: "memo tpa atcan mi"
+    beklenen: yok
+  - mesaj: "tpa atar mısın"
+    beklenen: yok
+
+  # ---------- TAKIM ÜYELİĞİ ----------
+  - mesaj: "takıma nasıl girilir"
+    beklenen: takim-uyelik
+  - mesaj: "takıma gelebilirmiyim?"
+    beklenen: takim-uyelik
+  - mesaj: "takımdan nasıl çıkılıyo"
+    beklenen: takim-uyelik
+  - mesaj: "takımdan birini nasıl atıyoruz"
+    beklenen: takim-uyelik
+  - mesaj: "takım nasıl kurulur"
+    beklenen: takim
+  - mesaj: "takım kuralım mı"
+    beklenen: yok
+  - mesaj: "team olalım mı ugur"
+    beklenen: yok
+  - mesaj: "takım olalım mı"
+    beklenen: yok
+
+  # ---------- ÖZEL MESAJ ----------
+  - mesaj: "nasıl birine fısıldarız"
+    beklenen: ozel-mesaj
+  - mesaj: "özel mesaj nasıl atılır"
+    beklenen: ozel-mesaj
+  - mesaj: "msg nasıl kapanır"
+    beklenen: ozel-mesaj
+  - mesaj: "özelden yaz bana"
+    beklenen: yok
+
+  # ---------- ANTİK KALINTI ----------
+  - mesaj: "rehber kalıntı ne?"
+    beklenen: antik-kalinti
+  - mesaj: "antik kalıntı nerede bulunur"
+    beklenen: antik-kalinti
+  - mesaj: "1 antik kalıntı kaç netherite veriyor"
+    beklenen: antik-kalinti
+  - mesaj: "antik kalıntı kaçtan gider?"
+    beklenen: yok
+  - mesaj: "7 antik kalıntım var kaç verirsiniz"
+    beklenen: yok
+  - mesaj: "1 antik kalıntının piyasa fiyatı ne?"
+    beklenen: yok
+  - mesaj: "antik kalıntı isteyen?"
+    beklenen: yok
+
+  # ---------- PARA ----------
+  - mesaj: "para nasi kasabilirim"
+    beklenen: para-kazanma
+  - mesaj: "nasıl para atıyoruz"
+    beklenen: para-gonderme
+  - mesaj: "para atabilecek var mı"
+    beklenen: yok
+  - mesaj: "mace paran kac oldu"
+    beklenen: yok
+
+  # ---------- OYUNCULARIN BİRBİRİNE SORDUKLARI: SUSMALI ----------
+  - mesaj: "kaç seviyesin?"
+    beklenen: yok
+  - mesaj: "seviyen kaç oldu"
+    beklenen: yok
+  - mesaj: "kaç kristalin var"
+    beklenen: yok
+  - mesaj: "skinin çok güzel nerden aldın"
+    beklenen: yok
+  - mesaj: "hazine haritası nasıl kullanılır"
+    beklenen: yok
+  - mesaj: "elytra ile nasıl uçulur"
+    beklenen: yok
+  - mesaj: "kasa anahtarı kaçtan satıyorsun"
+    beklenen: yok
+  - mesaj: "discorda gelir misin"
+    beklenen: yok
+  - mesaj: "rütben ne"
+    beklenen: yok
+  - mesaj: "marketten ne aldın"
+    beklenen: yok
+  - mesaj: "kasa açtım ne çıktı sana"
+    beklenen: yok
+  - mesaj: "ende gidek mi"
+    beklenen: yok
+  - mesaj: "netherite kazma kaç tane var sende"
+    beklenen: yok
