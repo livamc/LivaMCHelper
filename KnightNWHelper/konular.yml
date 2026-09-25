@@ -760,7 +760,12 @@ konular:
 
   acemi-koruma:
     aktif: true
-    guclu: [acemi koruma, acemikoruma, yeni oyuncu koruma]
+    # SORU ŞARTI ARANMAZ: oyuncular "acemi koruması ne" diye yazıyor ve
+    # eklenti tek başına "ne" kelimesini soru saymıyor. Kalıplar çok özel
+    # olduğu için sohbete karışma riski düşük; "acemi koruman mı var" gibi
+    # oyuncuya soruları yasak listesi eliyor.
+    soru-gerekmez: true
+    guclu: [acemi koruma, acemikoruma, yeni oyuncu koruma, başlangıç koruma]
     zayif: [acemi]
     # "acemi koruman mı var", "kim beni kesmek ister" oyuncuya soruluyor.
     yasak: ["=kim", "=koruman"]

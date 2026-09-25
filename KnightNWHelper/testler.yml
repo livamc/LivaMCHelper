@@ -379,3 +379,15 @@ testler:
   - mesaj: "kim kelle koydu bana"
     beklenen: yok
 
+  # ---------- SUNUCUDA YAŞANAN: "acemi koruması ne" cevapsız kaldı ----------
+  # Eklenti tek başına "ne" kelimesini soru saymıyor. acemi-koruma
+  # konusu artık soru şartı aramıyor.
+  - mesaj: "acemi koruması ne"
+    beklenen: acemi-koruma
+  - mesaj: "baslangiç koruması nezaman bitcek"
+    beklenen: acemi-koruma
+  - mesaj: "acemi koruman mı var"
+    beklenen: yok
+  - mesaj: "acemi korumam bitti kim beni kesmek ister"
+    beklenen: yok
+
