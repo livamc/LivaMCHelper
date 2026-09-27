@@ -360,7 +360,8 @@ konular:
     guclu: [kasa anahtar, crate, anahtar nerede, anahtar nasıl, kasa aç, kasa nasıl, kasa nerede, kasalar nerede]
     zayif: [kasa, anahtar]
     # 'event/etkinlik' yasak: event kasası ayrı konu.
-    yasak: [ender sandık, event, evenet, etkinlik kasa]
+    # Telefon kontrol soruları mobil-kontrol konusuna ait.
+    yasak: [ender sandık, event, evenet, etkinlik kasa, telefonda nasıl, telefondan nasıl, mobilde nasıl, mobilden nasıl]
     cevap:
       - "&fKasalar &eWarp → Kasa &falanında. Anahtar &e/market &fkristal bölümünden alınır."
       - "&7Her saat başı sunucudaki herkese ücretsiz anahtar dağıtılır."
@@ -838,3 +839,32 @@ konular:
     cevap:
       - "&fSaatte 1 &eyarış etkinliği &fdüzenlenir: rastgele bir görev verilir. &e/yaris"
       - "&7Birinci olan oyuncu rastgele bir ödül kazanır: para, kasa anahtarı, netherite, bazen Elytra."
+
+  # ================= TELEFON (BEDROCK) =================
+  # Kayıtlarda ~49 kez soruldu: "mobilden nasıl sağ tıklıyoruz",
+  # "telefondayım sağ tık olmuyo". DİKKAT: "dokun" kelimesi kullanılmadı,
+  # oyuncular onu en çok "ipeksi dokunuş" büyüsü için yazıyor.
+
+  mobil-kontrol:
+    aktif: true
+    guclu: [sağ tık, sağtık, sağ tıkla, mobilden nasıl, mobilde nasıl, telefondan nasıl, telefonda nasıl, tabletten nasıl, mobil kontrol]
+    zayif: [mobil, telefon, tablet]
+    yasak: [ipeksi, "*dokunus"]
+    cevap:
+      - "&fTelefonda &esağ tık = kısa dokun&f: kasaya, sandığa, NPC'ye bir kez dokun."
+      - "&7Sol tık (kırma/vurma) = &ebasılı tut&7. Eğilerek dokunmak için önce eğilme tuşuna bas."
+
+  mobil-sag-tik-sikayet:
+    # SORU ŞARTI ARANMAZ: "telefondayım sağ tık olmuyo" soru değil ama
+    # tam yardım edilmesi gereken an. Kalıplar çok özel olduğu için
+    # sohbete karışma riski düşük. Öncelik 1: mobil-kontrol ile çakışmasın.
+    soru-gerekmez: true
+    oncelik: 1
+    aktif: true
+    guclu: [sağ tık olmu, sağ tık yapamı, sağ tıklayamı, sağ tık çalışm, sağtık olmu]
+    zayif: []
+    yasak: []
+    cevap:
+      - "&fTelefonda &esağ tık = kısa dokun&f: kasaya, sandığa, NPC'ye bir kez dokun."
+      - "&7Sol tık (kırma/vurma) = &ebasılı tut&7. Eğilerek dokunmak için önce eğilme tuşuna bas."
+

@@ -380,6 +380,12 @@ entries:
   - title: "SSS: Öldüğüm yere nasıl dönerim, /back var mı?"
     content: "Evet. /back yazarak öldüğün yere geri dönersin. Eşyaların yere düştüyse hızlı ol; claim olmadığı için başka oyuncular da alabilir."
 
+  - title: "SSS: Telefonda (mobil / Bedrock) sağ tık nasıl yapılır?"
+    content: "Telefonda ve tablette fare olmadığı için sağ tık yerine ekrana kısa dokunulur: kasaya, sandığa, NPC'ye veya bloğa bir kez dokunmak sağ tık yerine geçer. Sol tık (blok kırmak, vurmak) için ekrana basılı tutulur. 'Eğilip sağ tıkla' denen yerlerde önce eğilme tuşuna basılır, sonra dokunulur. Bazı NPC'lerde ve moblarda ekranda ayrıca bir etkileşim düğmesi çıkar, ona da basılabilir. Telefondan oynayan oyuncular Java oyuncularıyla aynı dünyada oynar."
+
+  - title: "SSS: Telefondan girdim, bir menü veya kasa açılmıyor"
+    content: "Önce ekrana uzun basmak yerine kısa dokunmayı dene; uzun basmak sol tık sayılır ve menüyü açmaz. Yine açılmıyorsa hangi menü veya kasa olduğunu yazarak Discord'dan (discord.gg/livamc) destek talebi aç, yetkililer kontrol eder."
+
   # ── CEVAP TARZI ───────────────────────────────────────────
   - title: "Cevap Tarzı"
     content: "Sen LivaMC Helper'sın, LivaMC sunucusunun yardım asistanısın; sunucunun adı her zaman LivaMC'dir. Cevaplarını kısa, samimi ve Türkçe ver; komutları mutlaka yaz. SUNUCUYA ÖZEL bilgilerde (komutlar, fiyatlar, kurallar, sistemler, yetkililer, dünya sınırı gibi ayarlar) bu bilgi tabanında geçmeyen bir şey sorulursa uydurma; 'Bu konuda elimde bilgi yok, Discord sunucumuzdan (discord.gg/livamc) yetkililere sorabilirsin' de. Yanlış bilgi vermek, bilgi vermemekten daha kötüdür."

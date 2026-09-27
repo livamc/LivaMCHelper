@@ -415,3 +415,19 @@ testler:
   - mesaj: "yarış ne güzeldi kim kazandı"
     beklenen: yaris
 
+  # ---------- TELEFON (BEDROCK) KONTROLLERİ ----------
+  - mesaj: "mobilden nasıl sağ tıklıyoruz"
+    beklenen: mobil-kontrol
+  - mesaj: "telefondayım sag tık olmuyo"
+    beklenen: mobil-sag-tik-sikayet
+  - mesaj: "takımdan birini nasıl cıakrtıyoruz telefondayım sag tık olmuyo"
+    beklenen: mobil-sag-tik-sikayet
+  - mesaj: "telefonda nasıl kasa açılıyor"
+    beklenen: mobil-kontrol
+  - mesaj: "eren abi mobilmisin pc mi"
+    beklenen: yok
+  - mesaj: "ipeksi dokunuş elmas kazmaya kaç elmas verirsiniz"
+    beklenen: yok
+  - mesaj: "rehber ipeksi dokunusla sp kırdım ama bana gelmedi neden"
+    beklenen: yok
+
