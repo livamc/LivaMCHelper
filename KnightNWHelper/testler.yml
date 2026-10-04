@@ -431,3 +431,29 @@ testler:
   - mesaj: "rehber ipeksi dokunusla sp kırdım ama bana gelmedi neden"
     beklenen: yok
 
+  # ---------- DÖRDÜNCÜ TUR: "nası" yazımı ve kalan sorular ----------
+  - mesaj: "kasa nası açıcaz beyler"
+    beklenen: kasa
+  - mesaj: "nasi kabul edioz"
+    beklenen: isinlanma-istegi
+  - mesaj: "tamam nasıl kabul edecem trade"
+    beklenen: yok
+  - mesaj: "beyler dünyaya nasıl gidebilirim"
+    beklenen: orman-gitme
+  - mesaj: "nasıl gircem smp yerine"
+    beklenen: orman-gitme
+  - mesaj: "korumayı nası kapatıoz"
+    beklenen: acemi-koruma
+  - mesaj: "chat nasıl kapatcam"
+    beklenen: sohbet-ayar
+  - mesaj: "metin okuyucu nası kapatcam"
+    beklenen: sohbet-ayar
+  - mesaj: "eve ışınlanma komutu neydi"
+    beklenen: ev-home
+  - mesaj: "event kasasi nası kazaniliyo"
+    beklenen: event-kasasi
+  - mesaj: "admin büyü nası kaldırıyoz"
+    beklenen: yok
+  - mesaj: "oy nası veriyoz"
+    beklenen: oy-verme
+

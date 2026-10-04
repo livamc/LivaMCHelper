@@ -165,21 +165,21 @@ konular:
 
   para-kazanma:
     aktif: true
-    guclu: [para kazan, nasıl kazan, para yap, nasıl zengin, para kas, nasıl para, nası para, para nasıl, para nası]
+    guclu: [para kazan, nasıl kazan, para yap, nasıl zengin, para kas, nasıl para, nası para, para nasıl, para nası, nası kazan, nası zengin]
     zayif: [para, kazanç, zengin, gelir, kasmak]
     # 'kristal' yasak: "kristal nasıl kazanılır" sorusu bu konuya
     # değil kristal konusuna ait. Yasak olmasaydı iki konu yakın
     # puan alır ve fark kuralı yüzünden ikisi de susardı.
     # 'para at...' yasakları: "para nasıl atılıyo" kazanma değil gönderme sorusu.
     # 'başına/kelle': ödül koyma sorusu. 'harca': harcama sorusu.
-    yasak: [pay, yolla, gönder, transfer, kristal, para at, para ver, "*atil", "*atiy", "*atca", "*atar", "*atma", "*kastim", "*miyon", başına, kelle, harca]
+    yasak: [pay, yolla, gönder, transfer, kristal, "=kasa", kasası, event, para at, para ver, "*atil", "*atiy", "*atca", "*atar", "*atma", "*kastim", "*miyon", başına, kelle, harca]
     cevap:
       - "&fEn hızlı yol &e/gunlukgorev &fve &e/order &f— ikisi de sermaye istemez."
       - "&7Sonra &e/sell &fve &e/ah&7. Her gece 00:00'da seviyene göre maaş da alırsın."
 
   para-gonderme:
     aktif: true
-    guclu: [para yolla, para gönder, para at, para nasıl at, para nası at, nasıl para at, nası para at, nasıl para ver, kişiye para, birine para, para transfer, paytoggle, nasıl yolla, nasıl gönder]
+    guclu: [para yolla, para gönder, para at, para nasıl at, para nası at, nasıl para at, nası para at, nasıl para ver, kişiye para, birine para, para transfer, paytoggle, nasıl yolla, nasıl gönder, nası para ver, nası yolla, nası gönder]
     zayif: [pay, yolla, gönder, para]
     # "kim bana para atar", "para atacak var mı" dilenme; cevaplanmaz.
     yasak: [kristal, "=bana", var mı, "*atayim", "*atic", "*atcak", "*attar", "*atmis"]
@@ -208,7 +208,7 @@ konular:
 
   esya-satma:
     aktif: true
-    guclu: [nasıl sat, nerede sat, nerde sat, nereden sat, nereye sat, satış nasıl, eşya sat, item sat]
+    guclu: [nasıl sat, nerede sat, nerde sat, nereden sat, nereye sat, satış nasıl, eşya sat, item sat, nası sat, satış nası]
     zayif: [sell, sat, satmak, satıyorum]
     # 'spawner/anahtar/kristal' yasak: "spawner nerede satılıyor"
     # bir SATMA sorusu değil, nereden ALINIR sorusudur.
@@ -219,7 +219,7 @@ konular:
 
   acik-artirma:
     aktif: true
-    guclu: [açık artırma, ah sell, ah collect, ah nasıl, ah komut, oyuncu pazarı]
+    guclu: [açık artırma, ah sell, ah collect, ah nasıl, ah komut, oyuncu pazarı, ah nası]
     zayif: [ah, artırma, ilan]
     yasak: []
     cevap:
@@ -264,7 +264,7 @@ konular:
 
   kristal:
     aktif: true
-    guclu: [kristal, afk alan, afk nerede, afk nasıl]
+    guclu: [kristal, afk alan, afk nerede, afk nasıl, afk nası]
     zayif: [afk]
     # Gönderme soruları kristal-gonderme konusuna ait.
     yasak: ["=kristalin", "=kristallerin", kristal gönder, kristal at, kristal yolla]
@@ -292,7 +292,7 @@ konular:
 
   satis-carpani:
     aktif: true
-    guclu: [satış çarpan, çarpan nasıl, çarpanı artır, kademe nasıl]
+    guclu: [satış çarpan, çarpan nasıl, çarpanı artır, kademe nasıl, çarpan nası, kademe nası]
     zayif: [çarpan, kademe]
     yasak: []
     cevap:
@@ -312,7 +312,7 @@ konular:
 
   orman-gitme:
     aktif: true
-    guclu: [rtporman, ormana nasıl, ormana git, doğaya nasıl, ana dünya]
+    guclu: [rtporman, ormana nasıl, ormana git, doğaya nasıl, ana dünya, dünyaya nasıl, dünyaya git, dünyaya gid, dünyaya gir, smp nasıl, smpye nasıl, smp ye nasıl, smp yerine, ormana nası, doğaya nası, dünyaya nası, smp nası, smpye nası, smp ye nası]
     zayif: [orman, survival]
     yasak: [nether, end]
     cevap:
@@ -321,7 +321,7 @@ konular:
 
   nether-gitme:
     aktif: true
-    guclu: [rtpnether, nethere nasıl, nethera nasıl, nethere git, cehenneme]
+    guclu: [rtpnether, nethere nasıl, nethera nasıl, nethere git, cehenneme, nethere nası, nethera nası]
     zayif: [nether]
     yasak: []
     cevap:
@@ -330,7 +330,7 @@ konular:
 
   end-gitme:
     aktif: true
-    guclu: [rtpend, ende nasıl, end nasıl, ende git, ejderha nerede, end portal]
+    guclu: [rtpend, ende nasıl, end nasıl, ende git, ejderha nerede, end portal, ende nası, end nası]
     zayif: [end, ejderha]
     yasak: []
     cevap:
@@ -339,7 +339,7 @@ konular:
 
   spawn-warp:
     aktif: true
-    guclu: [spawna nasıl, spawn nasıl, spawn nerede, warp nasıl, warp nerede, warp listesi]
+    guclu: [spawna nasıl, spawn nasıl, spawn nerede, warp nasıl, warp nerede, warp listesi, spawna nası, spawn nası, warp nası]
     zayif: [spawn, warp]
     yasak: [spawner, doğurucu]
     cevap:
@@ -348,7 +348,7 @@ konular:
 
   menu:
     aktif: true
-    guclu: [menü nasıl, menü nerede, menü komut, ana menü]
+    guclu: [menü nasıl, menü nerede, menü komut, ana menü, menü nası]
     zayif: [menü, komut]
     yasak: []
     cevap:
@@ -357,7 +357,7 @@ konular:
 
   kasa:
     aktif: true
-    guclu: [kasa anahtar, crate, anahtar nerede, anahtar nasıl, kasa aç, kasa nasıl, kasa nerede, kasalar nerede]
+    guclu: [kasa anahtar, crate, anahtar nerede, anahtar nasıl, kasa aç, kasa nasıl, kasa nerede, kasalar nerede, anahtar nası, kasa nası]
     zayif: [kasa, anahtar]
     # 'event/etkinlik' yasak: event kasası ayrı konu.
     # Telefon kontrol soruları mobil-kontrol konusuna ait.
@@ -423,7 +423,7 @@ konular:
 
   ev-home:
     aktif: true
-    guclu: [sethome, delhome, ev nasıl, ev hakk, home nasıl, evime nasıl]
+    guclu: [sethome, delhome, ev nasıl, ev hakk, home nasıl, evime nasıl, eve ışınlan, eve nasıl, ev komut, ev belirle, evime git, ev nası, home nası, evime nası, eve nası]
     zayif: [evim, evime, evimi, home]
     yasak: []
     cevap:
@@ -432,7 +432,7 @@ konular:
 
   takim:
     aktif: true
-    guclu: [takım kur, takım nasıl, klan, team create]
+    guclu: [takım kur, takım nasıl, klan, team create, takım nası]
     zayif: [takım, team, tc, kurulur]
     # Katılma/ayrılma soruları takim-uyelik konusuna ait.
     yasak: [takıma, takımdan, takımına]
@@ -444,7 +444,7 @@ konular:
     aktif: true
     # "kim takıma gelmek ister", "takımdan kimseyi kaybetmedim" gibi
     # sohbetler cevaplanmasın diye yalnızca soru kalıpları var.
-    guclu: [takıma nasıl, takıma nası, takıma gir, takıma katıl, takıma davet, takıma gelebilir, takımdan nasıl, takımdan nası, takımdan çık, takımdan ayrıl, takımdan birini, team accept, team invite, team leave, team kick, davet nasıl, davet kabul]
+    guclu: [takıma nasıl, takıma nası, takıma gir, takıma katıl, takıma davet, takıma gelebilir, takımdan nasıl, takımdan nası, takımdan çık, takımdan ayrıl, takımdan birini, team accept, team invite, team leave, team kick, davet nasıl, davet kabul, davet nası]
     zayif: [davet]
     yasak: ["*yaz"]
     cevap:
@@ -456,9 +456,9 @@ konular:
     # "tp nasıl atıcam" gibi sorular eskiden cevapsız kalıyordu: 'tp' ve
     # 'tpa' tek başına zayıf. "egemen tpa attım mı" gibi oyuncuya dönük
     # cümleler cevaplanmasın diye sadece soru kalıpları güçlü.
-    guclu: [tpaccept, tpdeny, tptoggle, ışınlanma isteği, yanına nasıl, yanıma nasıl, tp nasıl, tpa nasıl, tp nası, tpa nası, nasıl tp, nasıl tpa, nası tp, nası tpa, tpa kime, tp kime, tpa nedir, tp nedir]
+    guclu: [tpaccept, tpdeny, tptoggle, ışınlanma isteği, yanına nasıl, yanıma nasıl, tp nasıl, tpa nasıl, tp nası, tpa nası, nasıl tp, nasıl tpa, nası tp, nası tpa, tpa kime, tp kime, tpa nedir, tp nedir, nasıl kabul, kabul nasıl, kabul ediliyor, kabul edili, yanına nası, yanıma nası, nası kabul, kabul nası]
     zayif: [tpa, tp, yanına gel]
-    yasak: [rtp, lobi]
+    yasak: [rtp, lobi, davet, takım, takas, trade]
     cevap:
       - "&e/tpa <oyuncu> &file ışınlanma isteği gönderirsin, karşı taraf kabul eder."
       - "&7Kabul: &e/tpaccept &7· Reddet: &e/tpdeny &7· Kapatmak: &e/tptoggle"
@@ -504,7 +504,7 @@ konular:
 
   vip-rutbe:
     aktif: true
-    guclu: [rütbe, sponsor, lvip, vip nasıl, vip nereden, vip kaç]
+    guclu: [rütbe, sponsor, lvip, vip nasıl, vip nereden, vip kaç, vip nası]
     zayif: [vip, rank]
     yasak: ["=rütben", "=rütbeni", "=rütbesi"]
     cevap:
@@ -513,7 +513,7 @@ konular:
 
   kit:
     aktif: true
-    guclu: [kit nasıl, kit nerede, başlangıç kit, kit alamıyorum]
+    guclu: [kit nasıl, kit nerede, başlangıç kit, kit alamıyorum, kit nası]
     zayif: [kit]
     yasak: []
     cevap:
@@ -554,7 +554,7 @@ konular:
 
   oy-verme:
     aktif: true
-    guclu: [oy ver, oy nasıl, vote, oylama, oy kasası]
+    guclu: [oy ver, oy nasıl, vote, oylama, oy kasası, oy nası]
     zayif: [oy]
     yasak: []
     cevap:
@@ -583,7 +583,7 @@ konular:
 
   site-kredi:
     aktif: true
-    guclu: [site kredi, siteden nasıl, livamc com]
+    guclu: [site kredi, siteden nasıl, livamc com, siteden nası]
     zayif: [kredi, site, satın al]
     yasak: [gelmedi, claim]
     cevap:
@@ -630,7 +630,7 @@ konular:
     # "jackpot nasıl oynanır" -> jackpot, "yeni başladım" -> bu konu.
     oncelik: -1
     aktif: true
-    guclu: [yeni başladım, nereden başla, ilk ne yap, nasıl oynanır, oyuna başla, nasıl başla, yeni geldim]
+    guclu: [yeni başladım, nereden başla, ilk ne yap, nasıl oynanır, oyuna başla, nasıl başla, yeni geldim, nası oynanır, nası başla]
     # "ne yapmalıyım" BİLEREK zayıf: "banlandım ne yapmalıyım",
     # "skinim görünmüyor ne yapmalıyım" gibi cümlelerde de geçiyor.
     # Güçlü olsaydı bu konu onların önüne geçerdi.
@@ -671,9 +671,9 @@ konular:
 
   buyu-masasi:
     aktif: true
-    guclu: [büyü masası, enchant, büyü nasıl, büyü yap, kitap büyü]
+    guclu: [büyü masası, enchant, büyü nasıl, büyü yap, kitap büyü, büyü nası]
     zayif: [büyü, kitaplık]
-    yasak: []
+    yasak: [kaldır]
     cevap:
       - "&fBüyü masası ve etrafına 15 kitaplıkla en yüksek seviyeye çıkarsın."
       - "&7Hazır büyülü kitapları &e/ah &7ve kasalardan da bulabilirsin."
@@ -700,7 +700,7 @@ konular:
 
   etiket-renk:
     aktif: true
-    guclu: [etiket, isim rengi, sohbet rengi, nick nasıl]
+    guclu: [etiket, isim rengi, sohbet rengi, nick nasıl, nick nası]
     zayif: [renk nasıl, renk]
     # 'savaş' yasak: "savaş etiketi ne kadar sürüyor" bu konu değil.
     yasak: [savaş, combat, pvp]
@@ -710,7 +710,7 @@ konular:
 
   ucma-fly:
     aktif: true
-    guclu: [nasıl uçar, fly nasıl, uçabil, uçmak]
+    guclu: [nasıl uçar, fly nasıl, uçabil, uçmak, nası uçar, fly nası]
     zayif: [uçma, fly]
     yasak: [elytra, elitra, roket]
     cevap:
@@ -733,7 +733,7 @@ konular:
 
   ozel-mesaj:
     aktif: true
-    guclu: [fısılda, özel mesaj, özelden nasıl, msg nasıl, msg at, pm nasıl, msgtoggle]
+    guclu: [fısılda, özel mesaj, özelden nasıl, msg nasıl, msg at, pm nasıl, msgtoggle, özelden nası, msg nası, pm nası]
     zayif: [msg, pm, özelden, dm]
     yasak: []
     cevap:
@@ -744,7 +744,7 @@ konular:
     aktif: true
     # 'kalıntı' tek başına zayıf: "kalıntıları aldı mı" gibi sohbetler var.
     # Alım satım soruları zaten engelleyici kelimelerde eleniyor.
-    guclu: [antik kalıntı, kalıntı ne, kalıntı nere, kalıntı nerde, kalıntı nasıl, kalıntıya nere, kalıntıya nerde, kalıntıya nasıl, ancient debris, netherite hurda]
+    guclu: [antik kalıntı, kalıntı ne, kalıntı nere, kalıntı nerde, kalıntı nasıl, kalıntıya nere, kalıntıya nerde, kalıntıya nasıl, ancient debris, netherite hurda, kalıntı nası, kalıntıya nası]
     zayif: [kalıntı]
     yasak: [değer, var mı, "*sat", "*alir", "*tiyon"]
     cevap:
@@ -767,10 +767,10 @@ konular:
     # olduğu için sohbete karışma riski düşük; "acemi koruman mı var" gibi
     # oyuncuya soruları yasak listesi eliyor.
     soru-gerekmez: true
-    guclu: [acemi koruma, acemikoruma, yeni oyuncu koruma, başlangıç koruma]
+    guclu: [acemi koruma, acemikoruma, yeni oyuncu koruma, başlangıç koruma, koruma nasıl kapa, korumayı nasıl kapa, korumamı nasıl kapa, nasıl korumayı kapa, koruma kapat, korumayı kapat, korumamı kapat, koruma nasıl kalk, koruma nası kapa, korumayı nası kapa, korumamı nası kapa, nası korumayı kapa, koruma nası kalk]
     zayif: [acemi]
     # "acemi koruman mı var", "kim beni kesmek ister" oyuncuya soruluyor.
-    yasak: ["=kim", "=koruman"]
+    yasak: ["=kim", "=koruman", envanter, hile]
     cevap:
       - "&fAcemi koruma yeni oyunculara &e1 saat &fverilir, süre dolunca kendiliğinden kalkar."
       - "&7Erken kaldırmak istersen: &e/acemikoruma kapat"
@@ -818,7 +818,7 @@ konular:
     # DİKKAT: Türkçe karakterler sadeleşince "öldüğüm" ile "olduğum" aynı
     # yazılıyor. "olduğum yerde" sohbetine karışmasın diye kalıplar
     # yön bildiren sözlerle birlikte yazıldı.
-    guclu: [öldüğüm yere nasıl, nasıl öldüğüm yere, öldüğüm yere git, öldüğüm yere dön, öldüğüm yere ışın, ölüm noktası, back nasıl, back komut, back nedir]
+    guclu: [öldüğüm yere nasıl, nasıl öldüğüm yere, öldüğüm yere git, öldüğüm yere dön, öldüğüm yere ışın, ölüm noktası, back nasıl, back komut, back nedir, öldüğüm yere nası, nası öldüğüm yere, back nası]
     zayif: [back]
     yasak: []
     cevap:
@@ -847,7 +847,7 @@ konular:
 
   mobil-kontrol:
     aktif: true
-    guclu: [sağ tık, sağtık, sağ tıkla, mobilden nasıl, mobilde nasıl, telefondan nasıl, telefonda nasıl, tabletten nasıl, mobil kontrol]
+    guclu: [sağ tık, sağtık, sağ tıkla, mobilden nasıl, mobilde nasıl, telefondan nasıl, telefonda nasıl, tabletten nasıl, mobil kontrol, mobilden nası, mobilde nası, telefondan nası, telefonda nası, tabletten nası]
     zayif: [mobil, telefon, tablet]
     yasak: [ipeksi, "*dokunus"]
     cevap:
@@ -867,4 +867,14 @@ konular:
     cevap:
       - "&fTelefonda &esağ tık = kısa dokun&f: kasaya, sandığa, NPC'ye bir kez dokun."
       - "&7Sol tık (kırma/vurma) = &ebasılı tut&7. Eğilerek dokunmak için önce eğilme tuşuna bas."
+
+  # ================= OYUN AYARLARI =================
+  sohbet-ayar:
+    aktif: true
+    guclu: [chat nasıl kapa, sohbet nasıl kapa, chati nasıl kapa, sohbeti nasıl kapa, chati kapat, sohbeti kapat, chat kapat, metin okuyucu, anlatıcı, chat nası kapa, sohbet nası kapa, chati nası kapa, sohbeti nası kapa]
+    zayif: []
+    yasak: []
+    cevap:
+      - "&fSohbeti gizlemek için: &eAyarlar → Sohbet Ayarları → Sohbet: Gizli"
+      - "&7Sesli okuma (metin okuyucu) açıldıysa &eCtrl + B &7ile kapanır."
 
