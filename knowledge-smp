@@ -35,7 +35,7 @@ entries:
     content: "Sunucuda iki ayrı bakiye vardır: normal para (TL) ve kristal. Para ticaretten, görevlerden ve maaştan kazanılır. Kristal yalnızca AFK alanında durarak kazanılır ve para ile alınamayan şeyleri satın alır. Ekonomi kapalı bir döngüdür: kesilen vergi yok olmaz, hazineye gider ve her gece oyunculara geri döner."
 
   - title: "Ekonomi - Para Kazanma Yolları"
-    content: "Günlük görevler: /gunlukgorev ile her gün belirlenen 3 eşyayı toplayıp satmak (yeni oyuncu için en hızlı yol, sermaye istemez). • Sipariş panosu: /order ile diğer oyuncuların açtığı talepleri karşılamak (sermaye istemez). • Açık artırma: /ah ile kendi eşyanı satmak. • Sunucu mağazası: /market üzerinden eşya satmak. • Kademeli satış: aynı kategoride çok satarak çarpanını yükseltmek. • Gece maaşı: her gece 00:00'da hazineden seviyeye göre pay almak. • Saatlik yarış: /yaris etkinliğini kazanmak. • Pazaryeri: siteden dükkân kiralayıp 7/24 satış yapmak. • Madencilik ve mob avı ile seviye yükseltip maaş payını büyütmek."
+    content: "Günlük görevler: /gunlukgorev ile her gün belirlenen 3 eşyayı toplayıp satmak (yeni oyuncu için en hızlı yol, sermaye istemez). • Sipariş panosu: /order ile diğer oyuncuların açtığı talepleri karşılamak (sermaye istemez). • Sunucuya satış: /sell (veya /sat) yazınca satış menüsü açılır, eşyalarını içine koyup sunucuya satarsın. • Açık artırma: /ah ile kendi eşyanı diğer oyunculara satmak. • Kademeli satış: /sell ile aynı kategoride çok satarak çarpanını yükseltmek. • Gece maaşı: her gece 00:00'da hazineden seviyeye göre pay almak. • Saatlik yarış: /yaris etkinliğini kazanmak. • Pazaryeri: siteden dükkân kiralayıp 7/24 satış yapmak. • Madencilik ve mob avı ile seviye yükseltip maaş payını büyütmek."
 
   - title: "Ekonomi - Para Harcama Yolları"
     content: "/market - sunucu mağazası (End, Nether, Aletler, Yemek kategorileri) | /ah - diğer oyuncuların eşyaları | /order - eşya siparişi vermek | /jackpot - şans oyunu | Takım kurmak (100.000 TL) | Pazaryeri dükkânı kiralamak | Kristal bölümünden kasa anahtarı ve spawner (sadece kristal ile)"
@@ -51,19 +51,19 @@ entries:
     content: "/menu = Ana menüyü açar | /spawn = Ana meydana döner | /warp = Warp menüsünü açar | /ewarp <bölge> = Doğrudan o warpa gider | /ev = Ev menüsünü açar | /ev <ad> = Kayıtlı eve ışınlanır | /sethome <ad> = Bulunduğun yere ev kaydeder | /delhome <ad> = Ev kaydını siler | /rtp = Rastgele ışınlanma menüsünü açar | /rtporman = Ana dünyada rastgele bir noktaya ışınlar | /rtpnether = Nether'de rastgele bir noktaya ışınlar | /rtpend = End'de rastgele bir noktaya ışınlar | /tpa <oyuncu> = Işınlanma isteği gönderir | /tpaccept = Gelen ışınlanma isteğini kabul eder | /tpdeny = Gelen ışınlanma isteğini reddeder | /tptoggle = Işınlanma isteklerini açar/kapatır"
 
   - title: "Komutlar - Ekonomi ve Ticaret"
-    content: "/para = Bakiyeni gösterir | /pay <oyuncu> <miktar> = Para gönderir | /paytoggle = Para almayı açar/kapatır | /baltop = En zengin oyuncular listesi | /ah = Açık artırmayı açar | /ah sell <fiyat> = Elindekini satışa koyar | /ah collect = Süresi dolan eşyaları geri alır | /order = Sipariş panosunu açar | /market = Sunucu mağazasını açar | /kristal = Kristal bakiyeni gösterir | /kristal top = Kristal sıralamasını gösterir"
+    content: "/para = Bakiyeni gösterir | /pay <oyuncu> <miktar> = Para gönderir | /paytoggle = Para almayı açar/kapatır | /baltop = En zengin oyuncular listesi | /sell (veya /sat) = Sunucuya satış menüsünü açar, eşyalarını koyup satarsın | /ah = Açık artırmayı açar | /ah sell <fiyat> = Elindekini satışa koyar | /ah collect = Süresi dolan eşyaları geri alır | /order = Sipariş panosunu açar | /market = Sunucu mağazasını açar | /kristal = Kristal bakiyeni gösterir | /kristal top = Kristal sıralamasını gösterir"
 
   - title: "Komutlar - Takım"
     content: "/takim = Takım menüsünü açar | /team create <isim> = Takım kurar | /team invite <oyuncu> = Davet eder | /team accept <takım> = Daveti kabul eder | /team deny <takım> = Daveti reddeder | /team info <takım> = Takım bilgisini gösterir | /team kick <oyuncu> = Üye atar | /team promote <oyuncu> = Rol yükseltir | /team demote <oyuncu> = Rol düşürür | /team transfer <oyuncu> = Liderliği devreder | /team rename <isim> = İsim değiştirir | /team tag <etiket> = Etiket değiştirir | /team leave = Takımdan ayrılır | /team disband = Takımı dağıtır | /tc <mesaj> = Takım sohbetine yazar"
 
   - title: "Komutlar - Etkinlik ve Görev"
-    content: "/yaris = O anki saatlik yarış görevini gösterir | /gunlukgorev = Günlük görevlerini gösterir | /jackpot = Jackpot menüsünü açar | /afkbilgi = AFK istatistiklerini gösterir"
+    content: "/yaris = O anki saatlik yarış görevini gösterir | /gunlukgorev = Günlük görevlerini gösterir | /jackpot = Jackpot menüsünü açar | /afkbilgi = AFK istatistiklerini gösterir | /duel <oyuncu> = Düello isteği gönderir | /duel accept <oyuncu> = Düello isteğini kabul eder | /duel deny <oyuncu> = Düello isteğini reddeder | /duel toggle = Düello isteklerini açar/kapatır | /kelle koy <oyuncu> <miktar> = Oyuncunun kellesine ödül koyar | /kelle iptal <oyuncu> = Koyduğun ödülü geri çeker | /kelle = Kelle avcısı menüsünü açar"
 
   - title: "Komutlar - Sohbet ve Ayarlar"
-    content: "/msg <oyuncu> <mesaj> = Özel mesaj gönderir | /r <mesaj> = Son mesaja cevap verir | /ignore <oyuncu> = Oyuncuyu engeller | /msgtoggle = Özel mesaj almayı açar/kapatır | /etiket = Etiket menüsünü açar | /sure = Toplam oynama süreni gösterir | /surebak <oyuncu> = Başka oyuncunun süresini gösterir | /afk = AFK moduna geçer | /ping = Gecikmeni ölçer"
+    content: "/msg <oyuncu> <mesaj> = Özel mesaj gönderir | /r <mesaj> = Son mesaja cevap verir | /ignore <oyuncu> = Oyuncuyu engeller | /msgtoggle = Özel mesaj almayı açar/kapatır | /etiket = Etiket menüsünü açar | /sure = Toplam oynama süreni gösterir | /surebak <oyuncu> = Başka oyuncunun süresini gösterir | /afk = AFK moduna geçer | /ping = Gecikmeni ölçer | /nv (veya /gecegorus) = Gece görüşünü açar/kapatır | /acemikoruma kapat = Acemi korumasını erken kapatır | /lobi (veya /hub) = Oyun seçme lobisine gider, oradan BoxPvP gibi diğer oyunlara geçilir"
 
   - title: "Komutlar - Bilgi"
-    content: "/bilgi = Rehberi açar | /baslangic = Yeni oyuncu rehberini açar | /kurallar = Kural ekranını açar | /komutlar = Komut listesini açar | /sezon = Sezon sıralamalarını ve ödüllerini gösterir | /profil = Oyuncu profilini ve istatistiklerini açar | /vip = Rütbe menüsünü açar | /kit = Kit menüsünü açar | /sor <soru> = Yapay zeka yardımcıya soru sorar (bu komut!) | /vote = Oy verme sitelerinin linklerini verir | /discord = Discord sunucusunun linkini verir | /site = Web sitesinin linkini verir | /hesapesle = Discord hesabını oyun hesabıyla eşler | /envanterkoruma = Envanter koruma panelini açar, kalan hakkını gösterir ve korumayı açıp kapatır"
+    content: "/bilgi = Rehberi açar | /baslangic = Yeni oyuncu rehberini açar | /kurallar = Kural ekranını açar | /komutlar = Komut listesini açar | /sezon = Sezon sıralamalarını ve ödüllerini gösterir | /profil = Oyuncu profilini ve istatistiklerini açar | /vip = Rütbe menüsünü açar | /kit = Kit menüsünü açar | /sor <soru> = Yapay zeka yardımcıya soru sorar (bu komut!) | /vote = Oy verme sitelerinin linklerini verir | /discord = Discord sunucusunun linkini verir | /site = Web sitesinin linkini verir | /hesapesle = Discord hesabını oyun hesabıyla eşler | /discordodul = Discord ödül menüsünü açar, eşleme ödülünü her gün buradan alırsın | /envanterkoruma = Envanter koruma panelini açar, kalan hakkını gösterir ve korumayı açıp kapatır"
 
   - title: "Komutlar - Türkçe Karakter Uyarısı"
     content: "Komutlarda Türkçe karakter kullanılmaz. /yaris, /gunlukgorev, /takim, /hesapesle şeklinde yazılır. Yazarken TAB tuşu komutu tamamlar."
@@ -103,13 +103,13 @@ entries:
     content: "Evet, öldüğünde eşyaların yere düşer. Ender sandıktaki eşyaların güvendedir. Ayrıca ölmek seviye puanı da kaybettirir: bir oyuncunun elinden ölürsen -50, mob/düşme/lav gibi sebeplerle ölürsen -15 puan. Siteden envanter koruma satın alıp aktifleştirirsen bir kereliğine eşyaların korunur."
 
   - title: "SSS: Nerede PvP atabilirim?"
-    content: "Spawn ve pazaryeri dışında her yerde. Ana dünya, Nether ve End'de PvP açıktır ve serbesttir. Ayrı bir arena veya düello sistemi yoktur."
+    content: "Spawn ve pazaryeri dışında her yerde. Ana dünya, Nether ve End'de PvP açıktır ve serbesttir. Birebir dövüşmek istersen düello sistemi de var: /duel <oyuncu> ile istek atarsın."
 
   - title: "SSS: Savaş etiketi nedir?"
     content: "Bir oyuncuya vurduğun anda 15 saniyelik savaş etiketi alırsın. O süre boyunca ışınlanamaz ve oyundan çıkamazsın. Çıkarsan karakterin ölür ve eşyaların yere düşer. Yani combat-log yaparak kaçmak işe yaramaz. Savaş etiketin varken takımdan da ayrılamazsın."
 
   - title: "SSS: Nasıl para kazanırım?"
-    content: "Günlük görevler (/gunlukgorev), sipariş panosu (/order), açık artırma (/ah), sunucu mağazasına satış (/market), kademeli satış çarpanı, gece maaşı ve saatlik yarışı kazanmak. Yeni başlayan için en hızlısı günlük görev ve sipariş panosudur."
+    content: "Günlük görevler (/gunlukgorev), sipariş panosu (/order), sunucuya satış (/sell), açık artırma (/ah), kademeli satış çarpanı, gece maaşı ve saatlik yarışı kazanmak. Yeni başlayan için en hızlısı günlük görev ve sipariş panosudur."
 
   - title: "SSS: Maaş almak için ne yapmam gerekiyor?"
     content: "Son 24 saat içinde en az 15 dakika aktif oynamış olman yeterli. Maaşın seviyene göre hesaplanır ve her gece 00:00'da otomatik olarak hesabına yatar. Seviyen yükseldikçe payın büyür."
@@ -208,7 +208,34 @@ entries:
     content: "Spawn'daki kasa alanına gidersin (/warp menüsünden Kasalar), elindeki anahtara uygun kasaya sağ tıklarsın."
 
   - title: "SSS: Spawner nasıl alınır?"
-    content: "İki yolu var: mağazanın kristal bölümünden kristal ile satın almak, veya spawner kasasından çıkarmak. Spawner kasasında domuz, inek, zombi, iskelet, creeper, örümcek, zombi piglin, blaze ve demir golem spawnerları bulunur."
+    content: "Mağazanın kristal bölümünden kristal ile satın alabilir veya spawner kasasından çıkarabilirsin. Spawner kasasında domuz, inek, zombi, iskelet, creeper, örümcek, zombi piglin, blaze ve demir golem spawnerları bulunur. Ayrıca İpeksi Dokunuş büyülü kazmayla kırılan her spawner (doğadakiler ve kendi koyduğun dahil) %100 düşer, böylece alıp taşıyabilirsin. İpeksi Dokunuş olmadan kırarsan spawner yok olur."
+
+  - title: "SSS: Spawnerlar nasıl birleştirilir?"
+    content: "Aynı türden spawnerı elinde tutup yere koyduğun spawnera sağ tıklarsan üst üste biner. Bir blokta en fazla 32 spawner birleşir. Eğilerek (shift) tıklarsan elindeki spawnerların hepsi birden biner. Birleşmiş spawner daha çok mob çıkarır."
+
+  - title: "SSS: Düello nasıl atılır?"
+    content: "/duel <oyuncu> ile düello isteği gönderirsin. Gelen isteği /duel accept <oyuncu> ile kabul eder, /duel deny <oyuncu> ile reddedersin. İstek almak istemiyorsan /duel toggle yazarsın. Düello ayrı bir arenada yapılır. Bahisli düello şu an kapalıdır."
+
+  - title: "SSS: Sohbeti nasıl kapatırım veya küçültürüm?"
+    content: "Java'da: Seçenekler > Sohbet Ayarları > Sohbet: Gizli yaparsan sohbet tamamen kapanır. Aynı yerden Sohbet Boyutu ile küçültebilirsin. Sadece özel mesajları kapatmak istersen /msgtoggle yazarsın."
+
+  - title: "SSS: Günlük ödül nasıl alınır?"
+    content: "Günlük ödül web sitesinden alınır: livamc.com/fortune-wheel/gunluk-odul adresine gidip Ödülü Al butonuna basarsın. Ödül 50 kristal, 2 event kasası anahtarı ve 2.000 para. 24 saatte bir alınır, aynı internet bağlantısından günde bir kez alınabilir. Oyunda değilsen ödül oyuna girdiğinde verilir. Bundan ayrı olarak Discord hesabını eşleyenler /discordodul ile her gün Discord ödülü de alır."
+
+  - title: "SSS: Gece görüşü nasıl açılır?"
+    content: "/nv veya /gecegorus yazarak gece görüşünü açıp kapatabilirsin."
+
+  - title: "SSS: Kelleye ödül nasıl konur?"
+    content: "/kelle koy <oyuncu> <miktar> ile bir oyuncunun kellesine ödül koyarsın, o oyuncuyu öldüren ödülü kazanır. Koyduğun ödülü /kelle iptal <oyuncu> ile geri çekersin. Tüm kelleleri görmek için /kelle yazarsın."
+
+  - title: "SSS: Kristal başkasına gönderilebilir mi?"
+    content: "Hayır, kristal başka bir oyuncuya gönderilemez. Herkes kendi kristalini AFK alanında (/ewarp afk) durarak kazanır."
+
+  - title: "SSS: Acemi koruması nedir, nasıl kapatılır?"
+    content: "Yeni oyunculara 1 saatlik acemi koruması verilir, bu sürede diğer oyuncular sana zarar veremez. Süre dolunca kendiliğinden kalkar. Erken kapatmak istersen /acemikoruma kapat yazarsın."
+
+  - title: "SSS: BoxPvP'ye veya lobiye nasıl geçerim?"
+    content: "/lobi (veya /hub) yazınca oyun seçme lobisine gidersin. Oradan BoxPvP gibi diğer oyunlara geçebilirsin. SMP'deki ana meydana dönmek içinse /spawn yazarsın."
 
   - title: "SSS: Rastgele ışınlanma (RTP) nasıl çalışır?"
     content: "Spawn'daki küreye tıklayarak ya da komutla vahşi doğaya atlarsın. /rtporman ana dünyada, /rtpnether Nether'de, /rtpend End'de rastgele bir noktaya ışınlar. /rtp yazarsan menüden bölge seçersin. Işınlanma bekleme süren rütbene göre kısalır."
@@ -238,10 +265,10 @@ entries:
     content: "https://livamc.com adresinden web sitemize ulaşabilirsin. Oyun içinde /site yazabilirsin. Hesap oluşturmak için livamc.com/register, şifreni unuttuysan livamc.com/forgot-password."
 
   - title: "SSS: Discord hesabımı nasıl bağlarım?"
-    content: "/hesapesle komutunu kullanarak oyun hesabını Discord hesabınla eşleyebilirsin. Hesabını bağlayan oyuncu her gün ödül alır."
+    content: "/hesapesle komutunu kullanarak oyun hesabını Discord hesabınla eşleyebilirsin. Hesabını bağlayan oyuncu her gün /discordodul yazarak ödülünü alır. Ödül için Discord sunucumuzda (discord.gg/livamc) olman gerekir."
 
   - title: "SSS: Discord'a bağlayınca ödül var mı?"
-    content: "Evet. Discord hesabını bağlayan oyuncu her gün ödül alır. Ayrıca Discord sunucusunu boostlayanlara haftalık ek ödül verilir."
+    content: "Evet. Discord hesabını /hesapesle ile bağlayan oyuncu her gün /discordodul yazarak ödül alır. Ayrıca Discord sunucusunu boostlayanlara haftalık ek ödül verilir, o da /discordodul menüsünden alınır. Bu, web sitesindeki günlük ödülden ayrıdır; ikisi de alınabilir."
 
   - title: "SSS: Sesli sohbet var mı?"
     content: "Evet, mesafeye duyarlı sesli sohbet vardır. Yanındaki oyuncuyu duyarsın, uzaklaştıkça sesi kısılır. Ayrı bir program gerekmez."
@@ -513,6 +540,9 @@ systems:
       - End, Nether, Aletler, Yemek : normal para ile
       - Kristaller : kasa anahtarları ve spawnerlar, sadece kristal ile
 
+      SUNUCUYA SATIŞ (/sell)
+      /sell (veya /sat) yazınca satış menüsü açılır. Eşyalarını içine koyarsın, sunucu anında parasını öder. Fiyatlar dinamiktir; envanterde eşyaların üstünde değer etiketi görünür. Kademeli satış çarpanı bu menüden yapılan satışlarda işler. Başlangıç görevindeki "/sell ile ilk satışını yap" adımı da bu komutla yapılır.
+
       PAZARYERİ
       Spawn'daki pazaryerinde, siteden haftalık kiralanan kişiye özel NPC dükkânları bulunur. Kendi dükkânını açıp kendi fiyatınla 7/24 satış yapabilirsin. Sen çevrimdışıyken bile çalışır.
 
@@ -606,6 +636,9 @@ systems:
       KORUNAN BÖLGELER
       Spawn, pazaryeri ve kasa alanında PvP ve yapı bozma kapalıdır. Bu bölgelere zarar vermeye çalışmak kural ihlalidir.
 
+      DÜELLO
+      Birebir dövüş için düello sistemi vardır. /duel <oyuncu> ile istek atarsın, karşı taraf /duel accept <oyuncu> ile kabul eder, /duel deny <oyuncu> ile reddeder. İstekleri kapatmak için /duel toggle. Düello ayrı bir arenada yapılır. Bahisli düello şu an kapalıdır.
+
   - title: "Sezon Sistemi"
     content: |
       Her ay seçili istatistiklerde ilk üçe girenlere site kredisi hediye edilir. Oynadığın her şey arka planda sayılır; ay sonunda sıralamalar kapanır ve ödüller dağıtılır.
@@ -637,8 +670,9 @@ systems:
 
       ÖZELLİKLER
       - Sohbet köprüsü: oyun içi sohbet Discord'a, Discord'daki mesajlar oyuna akar
-      - Hesap eşleme ödülü: /hesapesle ile Discord hesabını bağlayan oyuncu her gün ödül alır
-      - Boost ödülü: sunucuyu boostlayanlara ayrıca haftalık ödül verilir
+      - Hesap eşleme ödülü: /hesapesle ile Discord hesabını bağlayan oyuncu her gün /discordodul ile ödül alır
+      - Boost ödülü: sunucuyu boostlayanlara ayrıca haftalık ödül verilir (/discordodul)
+      - Web sitesindeki günlük ödül (livamc.com/fortune-wheel/gunluk-odul) bundan ayrıdır, ikisi de alınabilir
       - Mesafeye duyarlı sesli sohbet: yanındaki oyuncuyu duyarsın, uzaklaştıkça sesi kısılır, ayrı bir program gerekmez
 
       Destek talebi, şikayet ve yetkili başvuruları Discord üzerinden yapılır.
